@@ -2,3 +2,4 @@ Patches for WIEN2k 14.2
 
 Place inilpw.patch into $WIENROOT/SRC_lapw1 and apply the patch with
 patch -b inilpw.f inilpw.patch
+Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg12333.html
