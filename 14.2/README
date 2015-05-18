@@ -1,5 +1,10 @@
 Patches for WIEN2k 14.2
 
+- Place 8Analysis_Properties.patch into $WIENROOT/SRC_usersguide_html
+- Apply the patch with: patch -b 8Analysis_Properties.html 8Analysis_Properties.patch
+Description: In the TETRA section of the WIEN2k usersguide, it has "-rxes E1 E2".
+Patch adds the missing "w" (correcting it to "-rxesw E1 E2") in the html version of the usersguide.
+
 - Place ados.patch into $WIENROOT/SRC_tetra 
 - Apply the patch with: patch -b ados.f ados.patch
 - Recompile
