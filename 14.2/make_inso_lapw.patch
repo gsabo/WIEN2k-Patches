@@ -1,0 +1,12 @@
+37c37
+< #*****************************print informatin in case.inso**********************************
+---
+> #*****************************print information in case.inso**********************************
+150c150
+< #******************find number of atoms without SO and indexs of them**************************
+---
+> #******************find number of atoms without SO and indexes of them**************************
+154c154
+< cat .ieds >> $file.inso
+---
+> if( $localp != 'n' ) cat .ieds >> $file.inso
