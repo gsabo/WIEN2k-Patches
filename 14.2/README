@@ -10,6 +10,12 @@ Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg12285.
 - Recompile
 Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg12333.html
 
+- Place initlapw.patch into $WIENROOT/SRC_w2web/htdocs/exec
+- Apply the patch with: patch -b initlapw.pl initlapw.patch
+Description: "x lstart" is not highlighted as the next step in red when instgen_lapw has been completed.
+Changes the w2web behavior so that "x lstart" is highlighted as the next step when case.inst exists. 
+Reference: http://www.mail-archive.com/wien%40zeus.theochem.tuwien.ac.at/msg11404.html
+
 - Place runfsm_lapw.patch into $WIENROOT 
 - Apply the patch with: patch -b runfsm_lapw runfsm_lapw.patch
 Reference: http://www.mail-archive.com/wien%40zeus.theochem.tuwien.ac.at/msg11407.html
