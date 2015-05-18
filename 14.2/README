@@ -9,3 +9,7 @@ Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg12285.
 - Apply the patch with: patch -b inilpw.f inilpw.patch
 - Recompile
 Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg12333.html
+
+- Place runfsm_lapw.patch into $WIENROOT 
+- Apply the patch with: patch -b runfsm_lapw runfsm_lapw.patch
+Reference: http://www.mail-archive.com/wien%40zeus.theochem.tuwien.ac.at/msg11407.html
