@@ -19,3 +19,8 @@ Reference: http://www.mail-archive.com/wien%40zeus.theochem.tuwien.ac.at/msg1140
 - Place runfsm_lapw.patch into $WIENROOT 
 - Apply the patch with: patch -b runfsm_lapw runfsm_lapw.patch
 Reference: http://www.mail-archive.com/wien%40zeus.theochem.tuwien.ac.at/msg11407.html
+
+- Place clmchange.patch into $WIENROOT/SRC_symmetso
+- Apply the patch with: patch -b clmchange.f clmchange.patch
+- Recompile
+Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg12361.html
