@@ -35,6 +35,7 @@ Reference: http://www.mail-archive.com/wien%40zeus.theochem.tuwien.ac.at/msg0763
 Description: For a spin polarized case, "view case.outputjoint" under Tasks->OPTIC in w2web
 results in a "System Error Can't read file //path-to/case/case.outputjoint". Patch adds the
 up/dn extension so that there is instead "view case.outputjointup" and "view outputjointdn".
+Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg12369.html
 
 - Place runfsm_lapw.patch into $WIENROOT 
 - Apply the patch with: patch -b runfsm_lapw runfsm_lapw.patch
