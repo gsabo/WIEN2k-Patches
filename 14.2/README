@@ -1,5 +1,10 @@
 Patches for WIEN2k 14.2
 
+- Place ados.patch into $WIENROOT/SRC_tetra 
+- Apply the patch with: patch -b ados.f ados.patch
+- Recompile
+Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg12285.html
+
 - Place inilpw.patch into $WIENROOT/SRC_lapw1 
 - Apply the patch with: patch -b inilpw.f inilpw.patch
 - Recompile
