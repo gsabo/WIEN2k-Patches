@@ -26,6 +26,10 @@ Description: "x lstart" is not highlighted as the next step in red when instgen_
 Changes the w2web behavior so that "x lstart" is highlighted as the next step when case.inst exists. 
 Reference: http://www.mail-archive.com/wien%40zeus.theochem.tuwien.ac.at/msg11404.html
 
+- Place initso_lapw.patch into $WIENROOT 
+- Apply the patch with: patch -b initso_lapw initso_lapw.patch
+Description: Changes the word "dedects to "detects".
+
 - Place make_inso_lapw.patch into $WIENROOT 
 - Apply the patch with: patch -b make_inso_lapw make_inso_lapw.patch
 Reference: http://www.mail-archive.com/wien%40zeus.theochem.tuwien.ac.at/msg07638.html
