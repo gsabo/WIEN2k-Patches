@@ -44,3 +44,9 @@ Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg12369.
 - Place runfsm_lapw.patch into $WIENROOT 
 - Apply the patch with: patch -b runfsm_lapw runfsm_lapw.patch
 Reference: http://www.mail-archive.com/wien%40zeus.theochem.tuwien.ac.at/msg11407.html
+
+- Place sym.patch into $WIENROOT/SRC_lapwdm 
+- Apply the patch with: patch -b sym.f sym.patch
+- Recompile
+Description: Writes a more detailed error message to the standard output if the so-det fails the check during lapwdm.
+Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg12513.html
