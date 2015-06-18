@@ -1,0 +1,4 @@
+98c98
+< 	 STOP
+---
+> 	 STOP 'Error: check so-det value(s) in case.outputdm[up/dn]'
