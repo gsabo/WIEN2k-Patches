@@ -1,0 +1,66 @@
+#!/bin/csh -f
+
+# initializes an orb (+U) calculation
+
+set file    = `pwd`
+set file    = $file:t		#tail of file-names
+
+set complex;
+
+#alias editor
+if($?EDITOR) then
+    alias editor '$EDITOR'
+else
+  alias editor emacs
+endif
+
+while ($#argv)
+  switch ($1)
+  case -h:
+    set help
+  case -so:
+    set complex = c
+    shift; breaksw
+  default:
+    shift; breaksw
+  endsw
+end
+if ($?help) goto help
+
+if ((-e $file.in1c) && !(-z $file.in1c)) then
+   set complex = c
+endif
+
+if (!(-e $file.inorb$complex)) cp $WIENROOT/SRC_templates/case.inorb $file.inorb$complex
+
+echo "Continue or edit $file.inorb$complex ? (c/e)" 
+  set b=($<)
+  if ($b == 'e') then 
+    editor $file.inorb$complex
+  endif
+
+if (!(-e $file.indm$complex)) cp $WIENROOT/SRC_templates/case.indm $file.indm$complex
+
+echo "Continue or edit $file.indm$complex ? (c/e)" 
+  set b=($<)
+  if ($b == 'e') then 
+    editor $file.indm$complex
+  endif
+
+echo "Now do the orb (+U) calculation:   runsp_lapw -orb ...  "
+
+exit (0)
+
+help:
+cat <<EOF
+ 
+init_orb_lapw [FLAGS]
+
+Initializes an orb (+U) calculation by copying case.inorb 
+and case.indm from SRC_templates to the case directory
+
+FLAGS:
+-h 	->	help
+-so	->	Creates case.inorbc and case.indmc for spin orbit calculation
+
+EOF
