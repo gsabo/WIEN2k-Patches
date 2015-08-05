@@ -20,6 +20,10 @@ Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg12361.
 - Recompile
 Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg12333.html
 
+- Place init_orb_lapw into $WIENROOT
+Description: Script under test for initializing a DFT+U calculation
+Usage: init_orb_lapw -h
+
 - Place initlapw.patch into $WIENROOT/SRC_w2web/htdocs/exec
 - Apply the patch with: patch -b initlapw.pl initlapw.patch
 Description: "x lstart" is not highlighted as the next step in red when instgen_lapw has been completed.
