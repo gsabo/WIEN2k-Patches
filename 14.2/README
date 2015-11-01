@@ -5,7 +5,7 @@ Patches for WIEN2k 14.2
 Description: In the TETRA section of the WIEN2k usersguide, it has "-rxes E1 E2".
 Patch adds the missing "w" (changing it to "-rxesw E1 E2") in the html version of the usersguide.
 
-- Place ados.patch into $WIENROOT/SRC_tetra 
+- Place ados.patch into $WIENROOT/SRC_tetra
 - Apply the patch with: patch -b ados.f ados.patch
 - Recompile
 Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg12285.html
@@ -14,6 +14,12 @@ Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg12285.
 - Apply the patch with: patch -b clmchange.f clmchange.patch
 - Recompile
 Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg12361.html
+
+- Place dipan.patch into $WIENROOT/SRC_dipan
+- Apply the patch with: patch -b dipan.f dipan.patch
+- Recompile
+Description: When dipan.def cannot be opened, the patch changes the error message from
+"ERROR IN OPENING NN.DEF !!!!" to "ERROR IN OPENING: dipan.def".
 
 - Place inilpw.patch into $WIENROOT/SRC_lapw1 
 - Apply the patch with: patch -b inilpw.f inilpw.patch
@@ -66,3 +72,8 @@ Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg12513.
 - Recompile
 Description: Definition file name is missing in the outputted w2w.error [ http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg12706.html ].
 This fixes it so that "'w2w' - can't open definition file w2w.def" is written in w2w.error instead of "'w2w' - can't open definition file ***".
+
+- Place x_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b x_lapw x_lapw.patch
+Description: Change in x_lapw for w2w to help allow hf with berryPI.
+Reference: http://www.mail-archive.com/wien%40zeus.theochem.tuwien.ac.at/msg13196.html
