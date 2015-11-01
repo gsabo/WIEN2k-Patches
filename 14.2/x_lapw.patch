@@ -1,0 +1,4 @@
+2258c2258
+<  50,'$file.energy$soupdn',   'old',    'formatted',  0
+---
+>  50,'$file.energy$sc$hf$soupdn',   'old',    'formatted',  0
