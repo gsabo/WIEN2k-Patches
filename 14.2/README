@@ -46,9 +46,10 @@ Reference: http://www.mail-archive.com/wien%40zeus.theochem.tuwien.ac.at/msg0763
 
 - Place mixer.patch into $WIENROOT/SRC_mixer
 - Apply the patch with: patch -b mixer.F mixer.patch
+- Recompile
 Description: Removes the gfortran error "At line 1015 of file mixer.F (unit = 22, file = 'case.scf')
 Fortran runtime error: Sequential READ or WRITE not allowed after EOF marker, possibly use REWIND or BACKSPACE"
-Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg13671.html
+Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg13758.html
 
 - Place optic.patch into $WIENROOT/SRC_w2web/htdocs/exec
 - Apply the patch with: patch -b optic.pl optic.patch
