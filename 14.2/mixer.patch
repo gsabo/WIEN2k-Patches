@@ -1,5 +1,4 @@
-1015c1015,1016
+1015c1015
 <                         write(22,*)':WARNING: K-list has changed'
 ---
->                         BACKSPACE(22)
 >                         write(21,*)':WARNING: K-list has changed'
