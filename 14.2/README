@@ -74,6 +74,11 @@ Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg12796.
 Description: Writes a more detailed error message to the standard output if the so-det fails the check during lapwdm.
 Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg12513.html
 
+- Place symmetso.patch into $WIENROOT/SRC_symmetso
+- Apply the patch with: patch -b symmetso.f symmetso.patch
+- Recompile
+Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg13834.html
+
 - Place w2w_main.patch into $WIENROOT/SRC_w2w
 - Apply the patch with: patch -b main.f w2w_main.patch
 - Recompile
