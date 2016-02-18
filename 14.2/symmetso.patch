@@ -1,0 +1,28 @@
+155c155
+<                if(x1.lt.-0.00001d0) then
+---
+>                if(x1.lt.-0.0000001d0) then
+164c164
+<                if(y1.lt.-0.00001d0) then
+---
+>                if(y1.lt.-0.0000001d0) then
+174c174
+<                if(z1.lt.-0.00001d0) then
+---
+>                if(z1.lt.-0.0000001d0) then
+184c184
+<                if(x1.gt. a(1)*sin(alpha(3)/180.d0*pi)-0.00001d0) then
+---
+>                if(x1.gt. a(1)*sin(alpha(3)/180.d0*pi)-0.0000001d0) then
+194c194
+<                if(y1.gt. a(2)-0.00001d0) then
+---
+>                if(y1.gt. a(2)-0.0000001d0) then
+204c204
+<                if(z1.gt. a(3)-0.00001) then
+---
+>                if(z1.gt. a(3)-0.0000001d0) then
+237c237
+<        write(6,*)' check whether the operations form a group'
+---
+>        write(6,*)' check whether the operations form a group',isym
