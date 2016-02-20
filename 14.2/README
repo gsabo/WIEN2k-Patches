@@ -68,6 +68,12 @@ Description: Three digit atomic numbers (Z) from 100-103 are not displayed corre
 and can be written incorrectly to case.struct. This patch tries to fix that.
 Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg12796.html
 
+- Place sumpara.patch into $WIENROOT/SRC_sumpara
+- Apply the patch with: patch -b sumpara.f sumpara.patch
+- Recompile
+Description: Definition file name is missing in the outputted sumpara.error.
+This fixes it so that "'SUMPAR' - can't open definition file sumpara.def" is written in sumpara.error instead of "'SUMPAR' - can't open definition file".
+
 - Place sym.patch into $WIENROOT/SRC_lapwdm 
 - Apply the patch with: patch -b sym.f sym.patch
 - Recompile
