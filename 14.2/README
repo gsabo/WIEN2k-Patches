@@ -58,6 +58,10 @@ results in a "System Error Can't read file //path-to/case/case.outputjoint". Pat
 up/dn extension so that there is instead "view case.outputjointup" and "view outputjointdn".
 Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg12369.html
 
+- Place runeece_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b runeece_lapw runeece_lapw.patch
+Reference: http://www.mail-archive.com/wien%40zeus.theochem.tuwien.ac.at/msg13706.html
+
 - Place runfsm_lapw.patch into $WIENROOT 
 - Apply the patch with: patch -b runfsm_lapw runfsm_lapw.patch
 Reference: http://www.mail-archive.com/wien%40zeus.theochem.tuwien.ac.at/msg11407.html
