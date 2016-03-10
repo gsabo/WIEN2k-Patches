@@ -21,6 +21,11 @@ Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg12361.
 Description: When dipan.def cannot be opened, the patch changes the error message from
 "ERROR IN OPENING NN.DEF !!!!" to "ERROR IN OPENING: dipan.def".
 
+- Place get_scf_data into $WIENROOT
+Description: Script gets data from the scf file
+Usage: get_scf_data
+Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg13947.html
+
 - Place inilpw.patch into $WIENROOT/SRC_lapw1 
 - Apply the patch with: patch -b inilpw.f inilpw.patch
 - Recompile
