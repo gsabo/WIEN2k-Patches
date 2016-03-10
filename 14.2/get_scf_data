@@ -1,0 +1,5 @@
+tail -n 100000 *.scf $1 | grep -e :ADIST -e :DIR -e :MV -e GREED -e :FRMS \
+-e :ENE -e :CHARG -e PRATT \
+-e :DIS -e "MIXING SC" -e ":RANK" -e PLANE | \
+grep -v -e "with 1.0" -e scheme -e CONTRIBUTION | \
+tail -n 50
