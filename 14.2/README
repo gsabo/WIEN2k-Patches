@@ -15,6 +15,12 @@ Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg12285.
 - Recompile
 Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg12361.html
 
+- Place clminter.patch into $WIENROOT/SRC_trig
+- Apply the patch with: patch -b clminter.f clminter.patch
+- Recompile
+Description: When clminter.def cannot be opened, the patch changes the error message from
+"ERROR IN OPENING MIXER.DEF !!!!" to "ERROR IN OPENING: clminter.def".
+
 - Place dipan.patch into $WIENROOT/SRC_dipan
 - Apply the patch with: patch -b dipan.f dipan.patch
 - Recompile
