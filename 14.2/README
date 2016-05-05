@@ -102,6 +102,11 @@ Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg12513.
 - Recompile
 Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg13834.html
 
+- Place vxclm2.patch into $WIENROOT/SRC_lapw0
+- Apply the patch with: patch -b vxclm2.f vxclm2.patch
+- Recompile
+Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg14068.html
+
 - Place w2w_main.patch into $WIENROOT/SRC_w2w
 - Apply the patch with: patch -b main.f w2w_main.patch
 - Recompile
