@@ -53,7 +53,9 @@ Description: Changes the word "dedects to "detects".
 
 - Place make_inso_lapw.patch into $WIENROOT 
 - Apply the patch with: patch -b make_inso_lapw make_inso_lapw.patch
-Reference: http://www.mail-archive.com/wien%40zeus.theochem.tuwien.ac.at/msg07638.html
+References:
+http://www.mail-archive.com/wien%40zeus.theochem.tuwien.ac.at/msg07638.html
+http://www.mail-archive.com/wien%40zeus.theochem.tuwien.ac.at/msg14183.html
 
 - Place mixer.patch into $WIENROOT/SRC_mixer
 - Apply the patch with: patch -b mixer.F mixer.patch
