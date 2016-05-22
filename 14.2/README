@@ -116,4 +116,6 @@ This fixes it so that "'w2w' - can't open definition file w2w.def" is written in
 - Place x_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b x_lapw x_lapw.patch
 Description: Change in x_lapw for w2w to help allow hf with berryPI.
+Also, a change was added so that .EDISP is created for dftd3 calculations.
 Reference: http://www.mail-archive.com/wien%40zeus.theochem.tuwien.ac.at/msg13196.html
+           http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg14330.html
