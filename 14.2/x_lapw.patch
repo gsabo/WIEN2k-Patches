@@ -1,4 +1,6 @@
-2258c2258
+1916a1917
+> grep "Edisp /kcal,au,eV:" $file.scfdftd3 | cut -c -43 | cut -c 31- > .EDISP
+2258c2259
 <  50,'$file.energy$soupdn',   'old',    'formatted',  0
 ---
 >  50,'$file.energy$sc$hf$soupdn',   'old',    'formatted',  0
