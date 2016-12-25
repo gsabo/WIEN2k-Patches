@@ -1,6 +1,0 @@
-87,88c87,88
-<  8000 WRITE(*,*) ' ERROR IN OPENING NN.DEF !!!!'
-<       STOP 'NN.DEF'
----
->  8000 WRITE(*,*) ' ERROR IN OPENING:',fname
->       STOP 'dipan.def'
