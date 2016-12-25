@@ -13,3 +13,7 @@ Usage: init_orb_lapw -h
 - Place initso_lapw.patch into $WIENROOT 
 - Apply the patch with: patch -b initso_lapw initso_lapw.patch
 Description: Changes the words "dedects to "detects" and "dedected" to "detected".
+
+- Place make_inso_lapw.patch into $WIENROOT 
+- Apply the patch with: patch -b make_inso_lapw make_inso_lapw.patch
+Description: Changes words in comments from "informatin" to "information" and "indexs" to "indexes".

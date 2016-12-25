@@ -2,17 +2,7 @@
 < #*****************************print informatin in case.inso**********************************
 ---
 > #*****************************print information in case.inso**********************************
-86c86,88
-<         set numberL = `head -$lineint < $filein1 | tail -1 |cut -c 11-13`
----
-> #        set numberL = `head -$lineint < $filein1 | tail -1 |cut -c 11-13`
->          set numberL1 = `head -$lineint < $filein1 | tail -1`
->          set numberL = $numberL1[2]
-150c152
+152c152
 < #******************find number of atoms without SO and indexs of them**************************
 ---
 > #******************find number of atoms without SO and indexes of them**************************
-154c156
-< cat .ieds >> $file.inso
----
-> if( $localp != 'n' ) cat .ieds >> $file.inso
