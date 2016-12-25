@@ -1,4 +1,0 @@
-1015c1015
-<                         write(22,*)':WARNING: K-list has changed'
----
->                         write(21,*)':WARNING: K-list has changed'
