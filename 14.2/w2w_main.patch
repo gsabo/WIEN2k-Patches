@@ -1,8 +1,0 @@
-251c251
-< !!!        'lapw2.def' couldn't be opened
----
-> !!!        'w2w.def' couldn't be opened
-253c253
-<   WRITE (ERRMSG,9000) FNAME
----
->   WRITE (ERRMSG,9000) deffn
