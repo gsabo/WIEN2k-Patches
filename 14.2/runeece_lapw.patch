@@ -1,6 +1,0 @@
-195,196c195,196
-< set nocut=`head -2 $file.in2${complex} |tail -1 | cut -c 12-80`
-< echo $emin $nocut >>  $file.in2${complex}eece
----
-> set nocut=`head -2 $file.in2${complex} |tail -1`
-> echo $emin $nocut[2-] >>  $file.in2${complex}eece
