@@ -1,6 +1,0 @@
-216,217c216,217
-< <INPUT NAME=file VALUE="$DIR/$CASE.outputjoint" TYPE=HIDDEN>
-< <INPUT TYPE=SUBMIT VALUE="view $CASE.outputjoint">
----
-> <INPUT NAME=file VALUE="$DIR/$CASE.outputjoint$spin" TYPE=HIDDEN>
-> <INPUT TYPE=SUBMIT VALUE="view $CASE.outputjoint$spin">
