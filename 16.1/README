@@ -5,3 +5,7 @@ Patches for WIEN2k 16.1
 - Recompile
 Description: When clminter.def cannot be opened, the patch changes the error message from
 "ERROR IN OPENING MIXER.DEF !!!!" to "ERROR IN OPENING: clminter.def".
+
+- Place initso_lapw.patch into $WIENROOT 
+- Apply the patch with: patch -b initso_lapw initso_lapw.patch
+Description: Changes the words "dedects to "detects" and "dedected" to "detected".
