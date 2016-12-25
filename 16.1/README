@@ -1,2 +1,7 @@
 Patches for WIEN2k 16.1
 
+- Place clminter.patch into $WIENROOT/SRC_trig
+- Apply the patch with: patch -b clminter.f clminter.patch
+- Recompile
+Description: When clminter.def cannot be opened, the patch changes the error message from
+"ERROR IN OPENING MIXER.DEF !!!!" to "ERROR IN OPENING: clminter.def".
