@@ -1,0 +1,8 @@
+187c187
+< The program symmetso dedects the proper symmetry and creates new struct and
+---
+> The program symmetso detects the proper symmetry and creates new struct and
+218c218
+<           echo " initso dedected $file.ksym, which contains proper symmetry operations"
+---
+>           echo " initso detected $file.ksym, which contains proper symmetry operations"
