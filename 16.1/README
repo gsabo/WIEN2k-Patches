@@ -34,3 +34,9 @@ Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg12369.
 - Place runfsm_lapw.patch into $WIENROOT 
 - Apply the patch with: patch -b runfsm_lapw runfsm_lapw.patch
 Reference: http://www.mail-archive.com/wien%40zeus.theochem.tuwien.ac.at/msg11407.html
+
+- Place struct.patch into $WIENROOT/SRC_w2web/libs
+- Apply the patch with: patch -b struct.pl struct.patch
+Description: Three digit atomic numbers (Z) from 100-103 are not displayed correctly in StructGen
+and can be written incorrectly to case.struct. This patch tries to fix that.
+Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg12796.html
