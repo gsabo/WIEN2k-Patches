@@ -50,6 +50,6 @@ This fixes it so that "'SUMPAR' - can't open definition file sumpara.def" is wri
 - Place x_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b x_lapw x_lapw.patch
 Description: An Unmatched ". error appears before CORE END and after LAPW2 END (run_lapw) and 
-SUMPARA END (run_lapw -p) during a scf cycle. The bc program seems not able to interpret the string
+SUMPARA END (run_lapw -p) during a scf cycle. The bc program seems to not able to interpret the string
 used to calculate the Fermi energy when it is broken over multiple lines with the echo program on 
 some systems. The patch combines the string back into one line like the format was in WIEN2k 14.2.
