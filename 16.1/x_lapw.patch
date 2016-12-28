@@ -1,0 +1,6 @@
+2581,2583c2581
+<             set eferm=`echo " if ($eferm > $efold + 0.2) {$efold + 0.2}  \
+<                               else if($eferm < $efold - 0.2) {$efold - 0.2} \
+<                               else ($eferm*$mixf+$efold*(1-$mixf) ) " | bc -l`
+---
+>             set eferm=`echo " if ($eferm > $efold + 0.2) {$efold + 0.2} else if($eferm < $efold - 0.2) {$efold - 0.2} else ($eferm*$mixf+$efold*(1-$mixf) ) " | bc -l`
