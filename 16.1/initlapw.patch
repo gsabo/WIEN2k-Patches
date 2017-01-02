@@ -5,6 +5,6 @@
 345c345
 < 
 ---
-> &mark if ($phase == $myphase || ($phase == 10);
+> &mark if ($phase == $myphase || $phase == 10);
 353a354
 > &mark if ($phase == 9);
