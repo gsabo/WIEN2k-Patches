@@ -1,5 +1,10 @@
 Patches for WIEN2k 16.1
 
+- Place broadening.patch into $WIENROOT/SRC_broadening
+- Apply the patch with: patch -b broadening.f broadening.patch
+- Recompile
+Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg15296.html
+
 - Place clminter.patch into $WIENROOT/SRC_trig
 - Apply the patch with: patch -b clminter.f clminter.patch
 - Recompile
