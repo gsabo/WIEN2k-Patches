@@ -11,6 +11,11 @@ Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg15296.
 Description: When clminter.def cannot be opened, the patch changes the error message from
 "ERROR IN OPENING MIXER.DEF !!!!" to "ERROR IN OPENING: clminter.def".
 
+- Place dipan.patch into $WIENROOT/SRC_dipan
+- Apply the patch with: patch -b dipan.f dipan.patch
+- Recompile
+Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg15441.html
+
 - Place init_orb_lapw into $WIENROOT
 Description: Script under test for initializing a DFT+U calculation
 Usage: init_orb_lapw -h
@@ -58,3 +63,4 @@ Description: An Unmatched ". error appears before CORE END and after LAPW2 END (
 SUMPARA END (run_lapw -p) during a scf cycle. The bc program seems to not be able to interpret the string
 used to calculate the Fermi energy when it is broken over multiple lines with the echo program on 
 some systems. The patch combines the string back into one line like the format was in WIEN2k 14.2.
+Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg15224.html
