@@ -30,9 +30,19 @@ Reference: http://www.mail-archive.com/wien%40zeus.theochem.tuwien.ac.at/msg1140
 - Apply the patch with: patch -b initso_lapw initso_lapw.patch
 Description: Changes the words "dedects to "detects" and "dedected" to "detected".
 
+- Place joint.patch into $WIENROOT/SRC_joint
+- Apply the patch with: patch -b joint.f joint.patch
+Description: Fixes non-spinpolarized SO factors in joint.
+Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg15724.html
+
 - Place make_inso_lapw.patch into $WIENROOT 
 - Apply the patch with: patch -b make_inso_lapw make_inso_lapw.patch
 Description: Changes words in comments from "informatin" to "information" and "indexs" to "indexes".
+
+- Place opmain.patch into $WIENROOT/SRC_optic
+- Apply the patch with: patch -b opmain.f opmain.patch
+Description: A label was added to write statements to indicate in output files if the results came from a SO calculation.
+Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg15724.html
 
 - Place optic.patch into $WIENROOT/SRC_w2web/htdocs/exec
 - Apply the patch with: patch -b optic.pl optic.patch
@@ -40,6 +50,16 @@ Description: For a spin polarized case, "view case.outputjoint" under Tasks->OPT
 results in a "System Error Can't read file //path-to/case/case.outputjoint". Patch adds the
 up/dn extension so that there is instead "view case.outputjointup" and "view outputjointdn".
 Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg12369.html
+
+- Place read_diag.patch into $WIENROOT/SRC_joint
+- Apply the patch with: patch -b read_diag.f read_diag.patch
+Description: Change read and format statements.
+Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg15724.html
+
+- Place readop.patch into $WIENROOT/SRC_joint
+- Apply the patch with: patch -b readop.f readop.patch
+Description: Changes "read(3,*) imist" to just "read(3,*)"
+Reference: http://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg15724.html
 
 - Place runfsm_lapw.patch into $WIENROOT 
 - Apply the patch with: patch -b runfsm_lapw runfsm_lapw.patch
