@@ -1,0 +1,33 @@
+34c34
+<       CHARACTER*2  aif,HINTRA(MG0)
+---
+>       CHARACTER*2  aif,HINTRA(MG0),aso
+206a207
+>       EMINIMA2 = 0.d0
+287c288
+<       READ(3,330) ncol1,head
+---
+>       READ(3,330) ASO,ncol1,head
+291c292
+<       READ(9,330) ncol1,head
+---
+>       READ(9,330) ASO,ncol1,head
+447a449,450
+>       sofactor=1.d0
+>       if(ASO.eq.'SO') sofactor=0.5d0
+454c457
+<         WKONE=fci
+---
+>         WKONE=fci*sofactor
+459c462
+<       FC(K,1)=fci/WKONE
+---
+>       FC(K,1)=fci/WKONE*sofactor
+464c467
+<          FC(K,I)=fci/WKONE
+---
+>          FC(K,I)=fci/WKONE*sofactor
+1130c1133
+<  330  format(10x,I1,A117)
+---
+>  330  format(A2,8x,I1,A117)
