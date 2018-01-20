@@ -1,0 +1,10 @@
+723,724c723,724
+<        abstol,neig,pNZ_vec,en,porfac,vec,1,1,DESC_vec,
+<        pWORK1,ipLWORK, pRWORK1, ipLRWORK,pIWORK1,ipLIWORK,                    pIFAIL,pICLUSTR,pGAP,INFO)
+---
+>        abstol,neig,pNZ_vec,en,porfac,vec,1,1,DESC_vec, &
+>        pWORK1,ipLWORK, pRWORK1, ipLRWORK,pIWORK1,ipLIWORK,pIFAIL,pICLUSTR,pGAP,INFO)
+756c756
+<      abstol,neig,pNZ_vec,en,porfac,vec,1,1,DESC_vec,
+---
+>      abstol,neig,pNZ_vec,en,porfac,vec,1,1,DESC_vec, &
