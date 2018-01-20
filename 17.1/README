@@ -3,6 +3,11 @@ Installing or upgrading to WIEN2k 17.1, refer to the WIEN2k website [ http://sus
 Patches for WIEN2k 17.1
 -----------------------
 
+- Place hmsec.patch into $WIENROOT/SRC_lapwso
+- Apply the patch with: patch -b hmsec.F hmsec.patch
+Description: This patch and -Dold_scalapack need to be added to FPOPT if an ifort version older than composer xe 2013 update 2 is used. However, there are cases where the Scalapack diagonalization of these older compilers can fail. Therefore, it is highly recommended to use a newer ifort compiler version, which has a pzheevr function that eliminates that issue.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16487.html
+
 - Place libxc.patch into $WIENROOT/SRC_lapw0
 - Apply the patch with: patch -b libxc.F libxc.patch
 Description: The SRC_lapw0/libxc.F in WIEN2k_17.1.tar only works with libxc 3.0.0.  To use libxc 4.0.3 with WIEN2k 17.1, apply this patch. 
