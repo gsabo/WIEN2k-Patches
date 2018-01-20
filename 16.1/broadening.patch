@@ -1,4 +1,0 @@
-164c164
-<       if (modus(1:1).eq.'#'.or.modus(2:2).eq.'#'.or.modus.eq.'       ') then
----
->       if (status(1:1).eq.'#'.or.status(2:2).eq.'#'.or.status.eq.'       ') then

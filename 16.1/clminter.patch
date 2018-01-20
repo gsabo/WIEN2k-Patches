@@ -1,6 +1,0 @@
-43,44c43,44
-<  8000 WRITE(*,*) ' ERROR IN OPENING MIXER.DEF !!!!'
-<       STOP 'MIXER.DEF'
----
->  8000 WRITE(*,*) ' ERROR IN OPENING: clminter.def'
->       STOP 'clminter.def'

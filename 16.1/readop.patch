@@ -1,4 +1,0 @@
-41c41
-<       read(3,*) imist
----
->       read(3,*) !!! imist

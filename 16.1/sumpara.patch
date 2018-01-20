@@ -1,4 +1,0 @@
-438c438
-<       WRITE (ERRMSG,9000) FNAME
----
->       WRITE (ERRMSG,9000) DEFFN

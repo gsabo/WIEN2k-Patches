@@ -1,8 +1,0 @@
-587,589c587,589
-<        alpha(1)=alp
-<        alpha(2)=bet
-<        alpha(3)=gam
----
->        alpha(1)=alp*pi/180.d0
->        alpha(2)=bet*pi/180.d0
->        alpha(3)=gam*pi/180.d0
