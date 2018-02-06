@@ -3,6 +3,11 @@ Installing or upgrading to WIEN2k 17.1, refer to the WIEN2k website [ http://sus
 Patches for WIEN2k 17.1
 -----------------------
 
+- Place bz_lin.patch into $WIENROOT/SRC_spaghetti
+- Apply the patch with: patch -b bz_lin.f bz_lin.patch
+Description: Changes tolerance from 10^-7 back to 10^-5, which can remove needless vertical lines if they appear in the band structure plots.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16402.html
+
 - Place hmsec.patch into $WIENROOT/SRC_lapwso
 - Apply the patch with: patch -b hmsec.F hmsec.patch
 Description: This patch and -Dold_scalapack need to be added to FPOPT if an ifort version older than composer xe 2013 update 2 is used. However, there are cases where the Scalapack diagonalization of these older compilers can fail. Therefore, it is highly recommended to use a newer ifort compiler version, which has a pzheevr function that eliminates that issue.
