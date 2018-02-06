@@ -1,0 +1,4 @@
+157c157
+<     set FFTW_LIB = `grep :FFTW_LIB $bin/WIEN2k_OPTIONS | cut -d : -f 3-`
+---
+>     set FFTW_LIB = `grep :FFTW_LIB: $bin/WIEN2k_OPTIONS | cut -d : -f 3-`
