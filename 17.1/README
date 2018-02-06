@@ -17,3 +17,8 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17039
 - Apply the patch with: patch -b libxc.F libxc.patch
 Description: The SRC_lapw0/libxc.F in WIEN2k_17.1.tar only works with libxc 3.0.0.  To use libxc 4.0.3 with WIEN2k 17.1, apply this patch. 
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16924.html
+
+- Place siteconfig_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b siteconfig_lapw siteconfig_lapw.patch
+Description: Fix for setting FFTW_LIB with siteconfig_lapw.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16920.html
