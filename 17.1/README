@@ -7,6 +7,7 @@ Patches for WIEN2k 17.1
 - Apply the patch with: patch -b bz_lin.f bz_lin.patch
 - Recompile
 Description: Changes tolerance from 10^-7 back to 10^-5, which can remove needless vertical lines if they appear in the band structure plots.
+             The 10^-7 may be need for cases with very fine mesh [ https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg15787.html ].
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16402.html
 
 - Place hmsec.patch into $WIENROOT/SRC_lapwso
@@ -14,6 +15,10 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16402
 - Recompile
 Description: This patch and -Dold_scalapack need to be added to FPOPT if an ifort version older than composer xe 2013 update 2 is used. However, there are cases where the Scalapack diagonalization of these older compilers can fail. Therefore, it is highly recommended to use a newer ifort compiler version, which has a pzheevr function that eliminates that issue.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16487.html
+
+- Place init_orb_lapw into $WIENROOT
+Description: Script under test for initializing a DFT+U calculation
+Usage: init_orb_lapw -h
 
 - Place lapw0.patch into $WIENROOT/SRC_lapw0
 - Apply the patch with: patch -b lapw0.F lapw0.patch
