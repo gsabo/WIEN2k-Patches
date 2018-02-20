@@ -7,8 +7,13 @@ Patches for WIEN2k 17.1
 - Apply the patch with: patch -b bz_lin.f bz_lin.patch
 - Recompile
 Description: Changes tolerance from 10^-7 back to 10^-5, which can remove needless vertical lines if they appear in the band structure plots.
-             The 10^-7 may be need for cases with very fine mesh [ https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg15787.html ].
+             The 10^-7 may be needed for cases with very fine mesh [ https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg15787.html ].
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16402.html
+
+- Place configure_int_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b configure_int_lapw configure_int_lapw.patch
+Description: Improves configure_int_lapw so that it works with the header produced by "x qtl".
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16479.html
 
 - Place hmsec.patch into $WIENROOT/SRC_lapwso
 - Apply the patch with: patch -b hmsec.F hmsec.patch
