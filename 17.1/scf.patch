@@ -1,0 +1,4 @@
+49c49
+< <INPUT NAME=p1 TYPE=CHECKBOX $p>parallel<br>
+---
+> <INPUT NAME=p1 TYPE=CHECKBOX $PREFS{'p1'}>parallel<br>
