@@ -3,6 +3,11 @@ Installing or upgrading to WIEN2k 17.1, refer to the WIEN2k website [ http://sus
 Patches for WIEN2k 17.1
 -----------------------
 
+- Place band.patch into $WIENROOT/SRC_w2web/htdocs/exec
+- Apply the patch with: patch -b band.pl band.patch
+Description: Fixes w2web parallel selection for bandstructure.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16069.html
+
 - Place bz_lin.patch into $WIENROOT/SRC_spaghetti
 - Apply the patch with: patch -b bz_lin.f bz_lin.patch
 - Recompile
@@ -43,6 +48,11 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16924
 - Recompile
 Description: Fixes the lapwdm Makefile.orig so that it will compile with the correct C compiler (in particular when a C compiler other than cc is used, such as icc).
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17081.html
+
+- Place scf.patch into $WIENROOT/SRC_w2web/htdocs/exec
+- Apply the patch with: patch -b scf.pl scf.patch
+Description: Fixes w2web parallel selection for scf.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16069.html
 
 - Place siteconfig_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b siteconfig_lapw siteconfig_lapw.patch
