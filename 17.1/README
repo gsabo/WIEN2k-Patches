@@ -23,6 +23,7 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16479
 - Place dstartpara_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b dstartpara_lapw dstartpara_lapw.patch
 Description: Tries to improve the serial mode error message reporting from dstartpara_lapw.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17120.html
 
 - Place hmsec.patch into $WIENROOT/SRC_lapwso
 - Apply the patch with: patch -b hmsec.F hmsec.patch
