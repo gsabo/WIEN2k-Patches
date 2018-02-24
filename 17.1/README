@@ -20,6 +20,10 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16402
 Description: Improves configure_int_lapw so that it works with the header produced by "x qtl".
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16479.html
 
+- Place dstartpara_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b dstartpara_lapw dstartpara_lapw.patch
+Description: Tries to improve the serial mode error message reporting from dstartpara_lapw.
+
 - Place hmsec.patch into $WIENROOT/SRC_lapwso
 - Apply the patch with: patch -b hmsec.F hmsec.patch
 - Recompile
