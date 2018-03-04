@@ -11,9 +11,8 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16069
 - Place bz_lin.patch into $WIENROOT/SRC_spaghetti
 - Apply the patch with: patch -b bz_lin.f bz_lin.patch
 - Recompile
-Description: Changes tolerance from 10^-7 back to 10^-5, which can remove needless vertical lines if they appear in the band structure plots.
-             The 10^-7 may be needed for cases with very fine mesh [ https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg15787.html ].
-Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16402.html
+Description: Removes needless vertical lines that can appear in the band structure plots.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17139.html
 
 - Place configure_int_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b configure_int_lapw configure_int_lapw.patch
