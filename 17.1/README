@@ -5,7 +5,7 @@ Patches for WIEN2k 17.1
 
 - Place band.patch into $WIENROOT/SRC_w2web/htdocs/exec
 - Apply the patch with: patch -b band.pl band.patch
-Description: Fixes w2web parallel selection for bandstructure.
+Description: Fixes w2web bandstructure case.in1(c) error so that the file is read from the case directory instead of the home/user directory.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16069.html
 
 - Place bz_lin.patch into $WIENROOT/SRC_spaghetti
@@ -23,6 +23,13 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16479
 - Apply the patch with: patch -b dstartpara_lapw dstartpara_lapw.patch
 Description: Tries to improve the serial mode error message reporting from dstartpara_lapw.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17120.html
+
+- Place get_nloat.patch into $WIENROOT/SRC_lapwso
+- Apply the patch with: patch -b get_nloat.f get_nloat.patch
+- Recompile
+Description: Fixes reading of case.vector* files by lapwso for recent ifort compilers (such as 2016, 2017, 2018 versions). 
+References: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17257.html
+            https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16589.html
 
 - Place hmsec.patch into $WIENROOT/SRC_lapwso
 - Apply the patch with: patch -b hmsec.F hmsec.patch
@@ -55,7 +62,7 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17081
 
 - Place scf.patch into $WIENROOT/SRC_w2web/htdocs/exec
 - Apply the patch with: patch -b scf.pl scf.patch
-Description: Fixes w2web parallel selection for scf.
+Description: Fixes w2web bandstructure case.in1(c) error so that the file is read from the case directory instead of the home/user directory.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16069.html
 
 - Place siteconfig_lapw.patch into $WIENROOT
