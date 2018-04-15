@@ -3,6 +3,10 @@ Installing or upgrading to WIEN2k 17.1, refer to the WIEN2k website [ http://sus
 Patches for WIEN2k 17.1
 -----------------------
 
+- Place addtinv.f into $WIENROOT/SRC_lapw2
+Description: Time-inversion fix for "-orb -eece".
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17049.html
+
 - Place band.patch into $WIENROOT/SRC_w2web/htdocs/exec
 - Apply the patch with: patch -b band.pl band.patch
 Description: Fixes w2web bandstructure case.in1(c) error so that the file is read from the case directory instead of the home/user directory.
@@ -41,11 +45,25 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16487
 Description: Script under test for initializing a DFT+U calculation
 Usage: init_orb_lapw -h
 
+- Place l2main.patch into $WIENROOT/SRC_lapw2
+- Apply the patch with: patch -b l2main.F l2main.patch 
+- Recompile (requires addtinv.f and timeinv1.f files and applied lapw2Makefile.orig.patch)
+Description: Time-inversion fix for "-orb -eece".
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17049.html
+
 - Place lapw0.patch into $WIENROOT/SRC_lapw0
 - Apply the patch with: patch -b lapw0.F lapw0.patch
 - Recompile
 Description: Enhancement that enables charged cells with hybrid functionals
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17039.html
+
+- Place lapw2Makefile.orig.patch into $WIENROOT/SRC_lapw2
+- Apply the patch with: patch -b Makefile.orig lapw2Makefile.orig.patch
+- Recompile (requires addtinv.f and timeinv1.f files and applied l2main.patch)
+  Note: In siteconfig, before recompiling, do "O Compiling Options" and "S Save and Quit"
+  so that the Makefile is updated from Makefile.orig in SRC_lapw2.
+Description: Time-inversion fix for "-orb -eece".
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17049.html
 
 - Place libxc.patch into $WIENROOT/SRC_lapw0
 - Apply the patch with: patch -b libxc.F libxc.patch
@@ -69,3 +87,7 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16069
 - Apply the patch with: patch -b siteconfig_lapw siteconfig_lapw.patch
 Description: Fix for setting FFTW_LIB with siteconfig_lapw.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16920.html
+
+- Place timeinv1.f into $WIENROOT/SRC_lapw2
+Description: Time-inversion fix for "-orb -eece".
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17049.html
