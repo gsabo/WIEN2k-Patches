@@ -45,6 +45,12 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16487
 Description: Script under test for initializing a DFT+U calculation
 Usage: init_orb_lapw -h
 
+- Place joint.patch into $WIENROOT/SRC_joint
+- Apply the patch with: patch -b joint.f joint.patch
+- Recompile
+Description: Fix for joint calculations.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16552.html
+
 - Place l2main.patch into $WIENROOT/SRC_lapw2
 - Apply the patch with: patch -b l2main.F l2main.patch 
 - Recompile (requires addtinv.f and timeinv1.f files and applied lapw2Makefile.orig.patch)
