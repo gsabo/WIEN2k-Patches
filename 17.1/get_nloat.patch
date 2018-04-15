@@ -1,0 +1,85 @@
+5a6
+>     integer, allocatable :: LOCHECK(:,:)
+6a8,41
+>     nloat=0
+> !!    allocate (elo(0:lomax,1:nloat))
+>     allocate(LOCHECK(0:lomax,1:nat))
+>     LOCHECK=0
+> 
+> !-b-reading case.in1 file----------
+>       read(4,*,iostat=ios)
+>       if (ios.ne.0) then
+>          if (myid.eq.0) write(6,*) "Something wrong with case.in1 file"
+>          CALL OUTERR('LAPWSO','Something wrong with case.in1 file')
+>          stop 'case.in1 not present'
+>       endif
+>       read(4,*)
+>       do J=1,nat
+>          READ (4,*) EI, NLR,iapw
+>          do I=1,NLR
+>             READ (4,5000) L, EI, DE, EMAIN, iapw
+>             if(l.gt.lomax) then
+>                     if (myid.eq.0) write(6,*) "lomax=",lomax," in modules.F too small for l=",l
+>                     CALL OUTERR('LAPWSO','lomax too small in modules.F')
+>                     STOP 'lomax too small'
+>             endif
+>             LOCHECK(L,J)=LOCHECK(L,J)+1
+>             if (LOCHECK(L,J).gt.nloat) nloat=LOCHECK(L,J)
+>          enddo
+>       enddo
+>       nloat=nloat+1
+>       if (nloat.lt.4) nloat=4
+> !-e-reading case.in1 file----------
+> 
+> 
+>      deallocate (LOCHECK)
+> 5000 FORMAT (1X,I1,2F10.5,A4,i2)
+> !    print*, "nloat=",nloat
+8,16d42
+<     nloat=1000
+<     allocate (elo(0:lomax,1:nloat))
+< 
+< 
+<       ii=1
+<       nloat=0
+<       DO i=1,nat
+< 
+<          read(9)
+18,23d43
+<          do
+<             read(9,iostat=ios) elo(0:lomax,1:ii)
+<             if (ios.ne.0) exit
+<             ii=ii+1
+<             backspace(9)
+<          enddo
+25c45,58
+<          nloat=ii
+---
+> !!      ii=1
+> !!     nloat=0
+> !!      DO i=1,nat
+> !!
+> !!         read(9)
+> !!
+> !!         do
+> !!            read(9,iostat=ios) elo(0:lomax,1:ii)
+> !!            if (ios.ne.0) exit
+> !!            ii=ii+1
+> !!            backspace(9)
+> !!         enddo
+> !!
+> !!         nloat=ii
+34,35c67
+<       ENDDO
+< 
+---
+> !!      ENDDO
+38,39d69
+<       deallocate(elo)
+<       rewind(9)
+40a71,72
+> !!      deallocate(elo)
+> !!      rewind(9)
+41a74,75
+> 
+> 
