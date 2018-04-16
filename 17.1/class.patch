@@ -1,0 +1,294 @@
+20,21c20,21
+<             write(6,*) ' pointgroup is 6/mmm (neg. iatnr!!)'
+<             write(6,*) ' axes should be: 6 || z, m n z, m n y'
+---
+>             write(66,*) ' pointgroup is 6/mmm (neg. iatnr!!)'
+>             write(66,*) ' axes should be: 6 || z, m n z, m n y'
+31,32c31,32
+<             write(6,*) ' pointgroup is 6/m (neg. iatnr!!)'
+<             write(6,*) ' axes should be: 6 || z, m n z'
+---
+>             write(66,*) ' pointgroup is 6/m (neg. iatnr!!)'
+>             write(66,*) ' axes should be: 6 || z, m n z'
+41,42c41,42
+<             write(6,*) ' pointgroup is -6m2 (neg. iatnr!!)'
+<             write(6,*) ' axes should be: -6 || z, m n y'
+---
+>             write(66,*) ' pointgroup is -6m2 (neg. iatnr!!)'
+>             write(66,*) ' axes should be: -6 || z, m n y'
+53,54c53,54
+<             write(6,*) ' pointgroup is 622 (neg. iatnr!!)'
+<             write(6,*) ' axes should be: 6 || z, m n y'
+---
+>             write(66,*) ' pointgroup is 622 (neg. iatnr!!)'
+>             write(66,*) ' axes should be: 6 || z, m n y'
+65,66c65,66
+<             write(6,*) ' pointgroup is 6mm (neg. iatnr!!)'
+<             write(6,*) ' axes should be: 6 || z, m n y'
+---
+>             write(66,*) ' pointgroup is 6mm (neg. iatnr!!)'
+>             write(66,*) ' axes should be: 6 || z, m n y'
+76,77c76,77
+<             write(6,*) ' pointgroup is -3m (neg. iatnr!!)'
+<             write(6,*) ' axes should be: -3 || z, m n y'
+---
+>             write(66,*) ' pointgroup is -3m (neg. iatnr!!)'
+>             write(66,*) ' axes should be: -3 || z, m n y'
+87,88c87,88
+<             write(6,*) ' pointgroup is -3 (neg. iatnr!!)'
+<             write(6,*) ' axes should be: -3 || z'
+---
+>             write(66,*) ' pointgroup is -3 (neg. iatnr!!)'
+>             write(66,*) ' axes should be: -3 || z'
+97,98c97,98
+<             write(6,*) ' pointgroup is -6 (neg. iatnr!!)'
+<             write(6,*) ' axes should be: -6 || z'
+---
+>             write(66,*) ' pointgroup is -6 (neg. iatnr!!)'
+>             write(66,*) ' axes should be: -6 || z'
+109,110c109,110
+<             write(6,*) ' pointgroup is 6 (neg. iatnr!!)'
+<             write(6,*) ' axes should be: 6 || z'
+---
+>             write(66,*) ' pointgroup is 6 (neg. iatnr!!)'
+>             write(66,*) ' axes should be: 6 || z'
+119,120c119,120
+<             write(6,*) ' pointgroup is 32 (neg. iatnr!!)'
+<             write(6,*) ' axes should be: 3 || z, 2 || y'
+---
+>             write(66,*) ' pointgroup is 32 (neg. iatnr!!)'
+>             write(66,*) ' axes should be: 3 || z, 2 || y'
+131,132c131,132
+<             write(6,*) ' pointgroup is 3m (neg. iatnr!!)'
+<             write(6,*) ' axes should be: 3 || z, m n y'
+---
+>             write(66,*) ' pointgroup is 3m (neg. iatnr!!)'
+>             write(66,*) ' axes should be: 3 || z, m n y'
+142,143c142,143
+<             write(6,*) ' pointgroup is 3 (neg. iatnr!!)'
+<             write(6,*) ' axes should be: 3 || z'
+---
+>             write(66,*) ' pointgroup is 3 (neg. iatnr!!)'
+>             write(66,*) ' axes should be: 3 || z'
+152,153c152,153
+<             write(6,*) ' pointgroup is mmm (neg. iatnr!!)'
+<             write(6,*) ' axes should be: m n z, m n y, m n x'
+---
+>             write(66,*) ' pointgroup is mmm (neg. iatnr!!)'
+>             write(66,*) ' axes should be: m n z, m n y, m n x'
+163,164c163,164
+<             write(6,*) ' pointgroup is 2/m (neg. iatnr!!)'
+<             write(6,*) ' axes should be: 2 || z, m n z'
+---
+>             write(66,*) ' pointgroup is 2/m (neg. iatnr!!)'
+>             write(66,*) ' axes should be: 2 || z, m n z'
+174,175c174,175
+<             write(6,*) ' pointgroup is mm2 (neg. iatnr!!)'
+<             write(6,*) ' axes should be: 2 || z, m n y'
+---
+>             write(66,*) ' pointgroup is mm2 (neg. iatnr!!)'
+>             write(66,*) ' axes should be: 2 || z, m n y'
+185,186c185,186
+<             write(6,*) ' pointgroup is 222 (neg. iatnr!!)'
+<             write(6,*) ' axes should be: 2 || z, 2 || y'
+---
+>             write(66,*) ' pointgroup is 222 (neg. iatnr!!)'
+>             write(66,*) ' axes should be: 2 || z, 2 || y'
+197,198c197,198
+<             write(6,*) ' pointgroup is -1 (neg. iatnr!!)'
+<             write(6,*) ' axes should be: any'
+---
+>             write(66,*) ' pointgroup is -1 (neg. iatnr!!)'
+>             write(66,*) ' axes should be: any'
+208,209c208,209
+<             write(6,*) ' pointgroup is m (neg. iatnr!!)'
+<             write(6,*) ' axes should be: m n z'
+---
+>             write(66,*) ' pointgroup is m (neg. iatnr!!)'
+>             write(66,*) ' axes should be: m n z'
+268,269c268,269
+<             write(6,*) ' pointgroup is 2 (neg. iatnr!!)'
+<             write(6,*) ' axes should be: 2 || z'
+---
+>             write(66,*) ' pointgroup is 2 (neg. iatnr!!)'
+>             write(66,*) ' axes should be: 2 || z'
+280,281c280,281
+<             write(6,*) ' pointgroup is 1'
+<             write(6,*) ' axes should be: any'
+---
+>             write(66,*) ' pointgroup is 1'
+>             write(66,*) ' axes should be: any'
+288c288
+<             write(6,*) ' no hex-pointgroup found' 
+---
+>             write(66,*) ' no hex-pointgroup found' 
+293,294c293,294
+<             write(6,*) ' pointgroup is m3m (pos. iatnr!!)'
+<             write(6,*) ' axes should be: any'
+---
+>             write(66,*) ' pointgroup is m3m (pos. iatnr!!)'
+>             write(66,*) ' axes should be: any'
+308,309c308,309
+<             write(6,*) ' pointgroup is m3 (pos. iatnr!!)'
+<             write(6,*) ' axes should be: any'
+---
+>             write(66,*) ' pointgroup is m3 (pos. iatnr!!)'
+>             write(66,*) ' axes should be: any'
+326c326
+< !            write(6,*) 'warning: second L=6 harmonics not programmed'
+---
+> !            write(66,*) 'warning: second L=6 harmonics not programmed'
+328,329c328,329
+<             write(6,*) ' pointgroup is 432 (pos. iatnr!!)'
+<             write(6,*) ' axes should be: any'
+---
+>             write(66,*) ' pointgroup is 432 (pos. iatnr!!)'
+>             write(66,*) ' axes should be: any'
+343,344c343,344
+<             write(6,*) ' pointgroup is -43m (pos. iatnr!!)'
+<             write(6,*) ' axes should be: any'
+---
+>             write(66,*) ' pointgroup is -43m (pos. iatnr!!)'
+>             write(66,*) ' axes should be: any'
+360,361c360,361
+<             write(6,*) ' pointgroup is -3m (neg. iatnr!!)'
+<             write(6,*) ' axes should be: -3 || z, m n y'
+---
+>             write(66,*) ' pointgroup is -3m (neg. iatnr!!)'
+>             write(66,*) ' axes should be: -3 || z, m n y'
+371,372c371,372
+<             write(6,*) ' pointgroup is 23 (pos. iatnr!!)'
+<             write(6,*) ' axes should be: any'
+---
+>             write(66,*) ' pointgroup is 23 (pos. iatnr!!)'
+>             write(66,*) ' axes should be: any'
+391c391
+< !            write(6,*) 'warning: second L=6 harmonics not programmed'
+---
+> !            write(66,*) 'warning: second L=6 harmonics not programmed'
+393,394c393,394
+<             write(6,*) ' pointgroup is -3 (neg. iatnr!!)'
+<             write(6,*) ' axes should be: -3 || z'
+---
+>             write(66,*) ' pointgroup is -3 (neg. iatnr!!)'
+>             write(66,*) ' axes should be: -3 || z'
+403,404c403,404
+<             write(6,*) ' pointgroup is 3m (neg. iatnr!!)'
+<             write(6,*) ' axes should be: 3 || z, m n y'
+---
+>             write(66,*) ' pointgroup is 3m (neg. iatnr!!)'
+>             write(66,*) ' axes should be: 3 || z, m n y'
+414,415c414,415
+<             write(6,*) ' pointgroup is 32 (neg. iatnr!!)'
+<             write(6,*) ' axes should be: 3 || z, 2 || y'
+---
+>             write(66,*) ' pointgroup is 32 (neg. iatnr!!)'
+>             write(66,*) ' axes should be: 3 || z, 2 || y'
+426,427c426,427
+<             write(6,*) ' pointgroup is 3 (neg. iatnr!!)'
+<             write(6,*) ' axes should be: 3 || z'
+---
+>             write(66,*) ' pointgroup is 3 (neg. iatnr!!)'
+>             write(66,*) ' axes should be: 3 || z'
+436,437c436,437
+<             write(6,*) ' pointgroup is 4/mmm (neg. iatnr!!)'
+<             write(6,*) ' axes should be: 4 || z, m n z, m n x'
+---
+>             write(66,*) ' pointgroup is 4/mmm (neg. iatnr!!)'
+>             write(66,*) ' axes should be: 4 || z, m n z, m n x'
+447,448c447,448
+<             write(6,*) ' pointgroup is 4/m (neg. iatnr!!)'
+<             write(6,*) ' axes should be: 4 || z, m n z'
+---
+>             write(66,*) ' pointgroup is 4/m (neg. iatnr!!)'
+>             write(66,*) ' axes should be: 4 || z, m n z'
+457,458c457,458
+<             write(6,*) ' pointgroup is mmm (neg. iatnr!!)'
+<             write(6,*) ' axes should be: m n z, m n y, m n x'
+---
+>             write(66,*) ' pointgroup is mmm (neg. iatnr!!)'
+>             write(66,*) ' axes should be: m n z, m n y, m n x'
+468,469c468,469
+<             write(6,*) ' pointgroup is -42m (neg. iatnr!!)'
+<             write(6,*) ' axes should be: -4 || z, 2 || x'
+---
+>             write(66,*) ' pointgroup is -42m (neg. iatnr!!)'
+>             write(66,*) ' axes should be: -4 || z, 2 || x'
+481,482c481,482
+<             write(6,*) ' pointgroup is 4mm (neg. iatnr!!)'
+<             write(6,*) ' axes should be: 4 || z, m n y'
+---
+>             write(66,*) ' pointgroup is 4mm (neg. iatnr!!)'
+>             write(66,*) ' axes should be: 4 || z, m n y'
+492,493c492,493
+<             write(6,*) ' pointgroup is 422 (neg. iatnr!!)'
+<             write(6,*) ' axes should be: 4 || z, 2 || y'
+---
+>             write(66,*) ' pointgroup is 422 (neg. iatnr!!)'
+>             write(66,*) ' axes should be: 4 || z, 2 || y'
+504,505c504,505
+<             write(6,*) ' pointgroup is 4 (neg. iatnr!!)'
+<             write(6,*) ' axes should be: 4 || z'
+---
+>             write(66,*) ' pointgroup is 4 (neg. iatnr!!)'
+>             write(66,*) ' axes should be: 4 || z'
+514,515c514,515
+<             write(6,*) ' pointgroup is -4 (neg. iatnr!!)'
+<             write(6,*) ' axes should be: -4 || z'
+---
+>             write(66,*) ' pointgroup is -4 (neg. iatnr!!)'
+>             write(66,*) ' axes should be: -4 || z'
+526,527c526,527
+<             write(6,*) ' pointgroup is 2/m (neg. iatnr!!)'
+<             write(6,*) ' axes should be: 2 || z, m n z'
+---
+>             write(66,*) ' pointgroup is 2/m (neg. iatnr!!)'
+>             write(66,*) ' axes should be: 2 || z, m n z'
+537,538c537,538
+<             write(6,*) ' pointgroup is mm2 (neg. iatnr!!)'
+<             write(6,*) ' axes should be: 2 || z, m n y'
+---
+>             write(66,*) ' pointgroup is mm2 (neg. iatnr!!)'
+>             write(66,*) ' axes should be: 2 || z, m n y'
+548,549c548,549
+<             write(6,*) ' pointgroup is 222 (neg. iatnr!!)'
+<             write(6,*) ' axes should be: 2 || z, 2 || y'
+---
+>             write(66,*) ' pointgroup is 222 (neg. iatnr!!)'
+>             write(66,*) ' axes should be: 2 || z, 2 || y'
+560,561c560,561
+<             write(6,*) ' pointgroup is -1 (neg. iatnr!!)'
+<             write(6,*) ' axes should be: any'
+---
+>             write(66,*) ' pointgroup is -1 (neg. iatnr!!)'
+>             write(66,*) ' axes should be: any'
+571,572c571,572
+<             write(6,*) ' pointgroup is m (neg. iatnr!!)'
+<             write(6,*) ' axes should be: m n z'
+---
+>             write(66,*) ' pointgroup is m (neg. iatnr!!)'
+>             write(66,*) ' axes should be: m n z'
+631,632c631,632
+<             write(6,*) ' pointgroup is 2 (neg. iatnr!!)'
+<             write(6,*) ' axes should be: 2 || z'
+---
+>             write(66,*) ' pointgroup is 2 (neg. iatnr!!)'
+>             write(66,*) ' axes should be: 2 || z'
+643,644c643,644
+<             write(6,*) ' pointgroup is 1 (neg. iatnr!!)'
+<             write(6,*) ' axes should be: any'
+---
+>             write(66,*) ' pointgroup is 1 (neg. iatnr!!)'
+>             write(66,*) ' axes should be: any'
+651c651
+<             write(6,*) ' no pointgroup found, isym =',isym 
+---
+>             write(66,*) ' no pointgroup found, isym =',isym 
+655c655
+<       write(6,900) (lm(1,i),lm(2,i),i=1,lmmax)
+---
+>       write(66,900) (lm(1,i),lm(2,i),i=1,lmmax)
+658c658
+<       write(6,*) '=============================================='
+---
+>       write(66,*) '=============================================='
