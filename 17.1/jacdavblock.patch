@@ -1,6 +1,0 @@
-140c140
-<                        write(200) Afacts_sp(i:n)
----
->                        write(200,err=100) Afacts_sp(i:n)
-141a142
-> 100 continue
