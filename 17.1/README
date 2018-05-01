@@ -63,6 +63,16 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16487
 Description: Script under test for initializing a DFT+U calculation
 Usage: init_orb_lapw -h
 
+- Place jacdavblock.patch into $WIENROOT/SRC_lapw1
+- Apply the patch with: patch -b jacdavblock.F jacdavblock.patch
+- Recompile
+Description: Change under test for removing the following gfortran error that occurs with using "run_lapw -it". 
+At line 140 of file jacdavblock_tmp_.F (unit = 200, file =
+'./case.storeHinv_proc_0')
+Fortran runtime error: Sequential READ or WRITE not allowed after EOF
+marker, possibly use REWIND or BACKSPACE
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17338.html
+
 - Place joint.patch into $WIENROOT/SRC_joint
 - Apply the patch with: patch -b joint.f joint.patch
 - Recompile
