@@ -1,0 +1,47 @@
+7a8
+> set angle
+27a29,37
+>   case -a:
+>     set angle = a
+>     shift; breaksw
+>   case -b:
+>     set angle = b
+>     shift; breaksw
+>   case -g:
+>     set angle = g
+>     shift; breaksw
+44,45c54,56
+<   grepline :ene "*abc*$scf" 1 -s| cut -c40- >$file.ene
+<   grepline :lat "*abc*$scf" 1 -s| cut -c27->$file.latparam
+---
+>   if( ! $?scf ) set scf='*abc*.scf'
+>   grepline :ene "$scf" 1 -s| cut -c40- >$file.ene
+>   grepline :lat "$scf" 1 -s| cut -c27->$file.latparam
+47,48c58,66
+<   grepline :ene '*mon*.scf' 1 -s| cut -c40- >$file.ene              
+<   grepline :lat '*mon*.scf' 1 -s| cut -c27->$file.latparam          
+---
+>   if( ! $?scf ) set scf='*mon*.scf'
+>   grepline :ene "$scf" 1 -s| cut -c40- >$file.ene              
+>   grepline :lat "$scf" 1 -s| cut -c27->$file.latparam          
+>   if($angle == 'b') then
+>   grepline :lat "$scf" 1 -s| cut -c27-57,67-73->$file.latparam          
+>   endif
+>   if($angle == 'g') then
+>   grepline :lat "$scf" 1 -s| cut -c27-57,73->$file.latparam          
+>   endif 
+50a69,74
+> echo The following scf files were used for analysis: 
+> foreach i ($scf)
+>   echo $i
+> end
+> echo " "
+> 
+51a76
+> echo " "
+64c89,91
+< parabolfit_lapw [ -t 2/3/4 ]  [ -f FILEHEAD ] [ -scf '*xxx*.scf' ]
+---
+> parabolfit_lapw [ -t 2/3/4 ]  [ -f FILEHEAD ] [ -scf '*xxx*.scf' ] [-a/b/g]
+> 
+> -a/b/g allows to specify alpha,beta or gamma in 4D fit.
