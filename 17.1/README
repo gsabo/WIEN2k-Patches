@@ -114,6 +114,12 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17081
 Description: Fixes "STOP DSTART - Error" from "x dstart" for WIEN2k compiled with gfortran and structures without inversion symmetry.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16674.html
 
+- Place parabolfit_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b parabolfit_lapw parabolfit_lapw.patch
+Description: Fix for multiple angles and scf file selection.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16799.html
+
+
 - Place pgbsym.patch into $WIENROOT/SRC_symmetry
 - Apply the patch with: patch -b pgbsym.f pgbsym.patch
 - Recompile
