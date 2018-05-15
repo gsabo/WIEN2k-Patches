@@ -59,6 +59,11 @@ References: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg1725
 Description: This patch and -Dold_scalapack need to be added to FPOPT if an ifort version older than composer xe 2013 update 2 is used. However, there are cases where the Scalapack diagonalization of these older compilers can fail. Therefore, it is highly recommended to use a newer ifort compiler version, which has a pzheevr function that eliminates that issue.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16487.html
 
+- Place init_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b init_lapw init_lapw.patch
+Description: Fix for init_lapw's -fermits option
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17427.html
+
 - Place init_orb_lapw into $WIENROOT
 Description: Script under test for initializing a DFT+U calculation
 Usage: init_orb_lapw -h
@@ -118,7 +123,6 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16674
 - Apply the patch with: patch -b parabolfit_lapw parabolfit_lapw.patch
 Description: Fix for multiple angles and scf file selection.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16799.html
-
 
 - Place pgbsym.patch into $WIENROOT/SRC_symmetry
 - Apply the patch with: patch -b pgbsym.f pgbsym.patch
