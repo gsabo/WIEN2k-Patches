@@ -62,7 +62,7 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16487
 - Place init_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b init_lapw init_lapw.patch
 Description: Fix for init_lapw's -fermits option
-Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17427.html
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17433.html
 
 - Place init_orb_lapw into $WIENROOT
 Description: Script under test for initializing a DFT+U calculation
@@ -156,7 +156,9 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16674
 - Apply the patch with: patch -b symmetry.f symmetry.patch
 - Recompile
 Description: Fixes "STOP DSTART - Error" from "x dstart" for WIEN2k compiled with gfortran and structures without inversion symmetry.
+             Also, accuracy tol fix for some structures.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16674.html
+           https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17440.html
 
 - Place timeinv1.f into $WIENROOT/SRC_lapw2
 Description: Time-inversion fix for "-orb -eece".
