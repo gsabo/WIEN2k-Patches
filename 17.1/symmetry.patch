@@ -2,10 +2,12 @@
 <       write(6,199) nbas
 ---
 >       write(66,199) nbas
-79c79
+79,80c79,80
 < !777       write(6,*) ib,iatom(ib),(pos(k,ib),k=1,3)
+<       tol=1.e-3
 ---
 > !777       write(66,*) ib,iatom(ib),(pos(k,ib),k=1,3)
+>       tol=1.e-4
 84,85c84,85
 <          write(6,*) 
 <          write(6,*) 'ATOM:',iatnr(jatom)
