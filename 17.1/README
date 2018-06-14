@@ -146,6 +146,12 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16069
 Description: Fix for setting FFTW_LIB with siteconfig_lapw.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16920.html
 
+- Place sph-UPcor.patch into $WIENROOT/SRC_optic
+- Apply the patch with: patch -b sph-UPcor.frc sph-UPcor.patch
+- Recompile
+Description: Under test for fixing XMCD calculations
+Reference: 
+
 - Place strwri.patch into $WIENROOT/SRC_symmetry
 - Apply the patch with: patch -b strwri.f strwri.patch
 - Recompile
