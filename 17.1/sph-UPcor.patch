@@ -1,0 +1,21 @@
+157c157
+<       allocate (loor1(0:lomax,1:nloat_max))
+---
+>       allocate (loor(0:lomax,1:nloat_max),lloor(0:lmax2,1:nloat_max),loor1(0:lomax,1:nloat_max))
+162a163,167
+>       allocate (alo(0:lomax,nloat_max),blo(0:lomax,nloat_max),clo(0:lomax,nloat_max))
+>       allocate (elo(0:lomax,nloat_max),plo(0:lomax,nloat_max),dplo(0:lomax,nloat_max))
+>       allocate (pelo(0:lomax,nloat_max),dpelo(0:lomax,nloat_max),peilo(0:lomax,nloat_max))
+>       allocate (pi12lo(0:lomax,nloat_max),pe12lo(0:lomax,nloat_max))
+>       allocate (a1lo(nrad,0:lomax,nloat_max),b1lo(nrad,0:lomax,nloat_max))
+735c740,741
+<          deallocate(loor1)     
+---
+>          deallocate (loor,lloor,loor1)
+>          deallocate (nloat)     
+738a745,749
+>          deallocate (alo,blo,clo)
+>          deallocate (elo,plo,dplo)
+>          deallocate (pelo,dpelo,peilo)
+>          deallocate (pi12lo,pe12lo)
+>          deallocate (a1lo,b1lo)
