@@ -150,7 +150,7 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16920
 - Apply the patch with: patch -b sph-UPcor.frc sph-UPcor.patch
 - Recompile
 Description: Under test for fixing XMCD calculations
-Reference: 
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17556.html
 
 - Place strwri.patch into $WIENROOT/SRC_symmetry
 - Apply the patch with: patch -b strwri.f strwri.patch
