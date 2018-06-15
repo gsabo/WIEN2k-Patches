@@ -1,15 +1,17 @@
-450c450
+190d189
+<            READ(4,*)
+450c449
 <       if(ASO.eq.'SO') sofactor=0.5d0
 ---
 >       if(ASO.eq.'SO'.and.(.not.spin)) sofactor=0.5d0
-847c847
+847c846
 <            if (SPIN) then
 ---
 >            if (SPIN.and.(ASO.ne.'SO')) then
-848a849,850
+848a848,849
 >            else if(SPIN.and.(ASO.eq.'SO')) then
 >              write(6,3160)
-856c858,862
+856c857,861
 <            WRITE(6,618) (SQRT(plasm2(npcol(i))),i=1,LCOL)
 ---
 >            if(SPIN.and.(ASO.eq.'SO')) then
@@ -17,9 +19,9 @@
 >            else
 >              WRITE(6,618) (SQRT(plasm2(npcol(i))),i=1,LCOL)
 >            endif
-1155a1162
+1155a1161
 >  3160 format(//,'   Total Plasma frequencies (spin-polarized+SO): ')
-1157,1158c1164,1165
+1157,1158c1163,1164
 <        '   !!! WARNING: ',  &
 <        'w_pl = sqrt( w_pl^2(up-spin) + w_pl^2(dn-spin) )!!!')
 ---
