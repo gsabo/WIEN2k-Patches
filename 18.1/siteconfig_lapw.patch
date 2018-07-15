@@ -1,2 +1,4 @@
-1402a1403
+1738a1739,1741
+> echo "    Changing Parallel Compiler to $MPF"
+> echo ""
 > sed -i "/parallel:/c\parallel:$MPF" $bin/WIEN2k_COMPILER
