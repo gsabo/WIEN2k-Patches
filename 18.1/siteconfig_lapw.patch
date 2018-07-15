@@ -1,0 +1,2 @@
+1402a1403
+> sed -i "/parallel:/c\parallel:$MPF" $bin/WIEN2k_COMPILER
