@@ -1,6 +1,0 @@
-170,171c170,171
-<       write(6,*) 'Bravais Matrix:'
-<       write(6,999) br2
----
->       write(66,*) 'Bravais Matrix:'
->       write(66,999) br2

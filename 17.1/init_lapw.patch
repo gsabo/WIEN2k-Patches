@@ -1,4 +1,0 @@
-498c498
-<     sed "3s/^TETRA........../TEMPS $fermit /" $file.in2_st >.in
----
->     sed "3s/^TETRA........../TEMPS $fermits /" $file.in2_st >.in
