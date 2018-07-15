@@ -3,7 +3,3 @@ Installing or upgrading to WIEN2k 18.1, refer to the WIEN2k website [ http://sus
 Patches for WIEN2k 18.1
 -----------------------
 
-- Place siteconfig_lapw.patch into $WIENROOT
-- Apply the patch with: patch -b siteconfig_lapw siteconfig_lapw.patch
-Description: Fix so that Parallel Compiler is written to the WIEN2k_COMPILER file
-Reference:
