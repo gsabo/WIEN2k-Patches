@@ -1,0 +1,4 @@
+37c37
+< 	$(FC) -o $(EXEC) $(FFLAGS) $(LDFLAGS) $(OBJS)
+---
+> 	$(FC) -o $(EXEC) $(FFLAGS) $(OBJS) $(LDFLAGS)
