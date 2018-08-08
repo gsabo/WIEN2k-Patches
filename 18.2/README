@@ -3,3 +3,9 @@ Installing or upgrading to WIEN2k 18.2, refer to the WIEN2k website [ http://sus
 Patches for WIEN2k 18.2
 -----------------------
 
+- Place Makefile.orig.patch into $WIENROOT/SRC_cif2struct
+- Apply the patch with: patch -b Makefile.orig Makefile.orig.patch 
+- In .siteconfig, do a Save and Quit of the Compiling Option, then Recompile
+Description: Removes "ifort: warning #10315: specifying -lm before files may supersede the Intel(R) math library and affect performance
+" when using the Intel Fortran compiler (ifort).
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17662.html
