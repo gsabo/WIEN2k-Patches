@@ -20,4 +20,4 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17863
 - Apply the patch with: patch -b siteconfig_lapw siteconfig_lapw.patch
 Description: Changes script from csh to tcsh.  For systems that do not use a csh symbolic link to tcsh,
 the script stops with a "Word too long" error on "alias update_makefiles".
-Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16030.html
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17866.html
