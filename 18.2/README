@@ -7,5 +7,17 @@ Patches for WIEN2k 18.2
 - Apply the patch with: patch -b Makefile.orig Makefile.orig.patch 
 - In .siteconfig, do a Save and Quit of the Compiling Option, then Recompile
 Description: Removes "ifort: warning #10315: specifying -lm before files may supersede the Intel(R) math library and affect performance
-" when using the Intel Fortran compiler (ifort).
-Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17662.html
+" when using the Intel Fortran compil$WIENROOTer (ifort).
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17807.html
+
+- Place ScaleDiag.patch into $WIENROOT/SRC_mixer
+- Apply the patch with: patch -b ScaleDiag.F ScaleDiag.patch
+- Recompile
+Description: Fixes Jacbian to Jacobian so that the mixer does not crash.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17863.html
+
+- Place siteconfig_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b siteconfig_lapw siteconfig_lapw.patch
+Description: Changes script from csh to tcsh.  For systems that do not use a csh symbolic link to tcsh,
+the script stops with a "Word too long" error on "alias update_makefiles".
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg16030.html
