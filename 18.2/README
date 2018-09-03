@@ -3,6 +3,12 @@ Installing or upgrading to WIEN2k 18.2, refer to the WIEN2k website [ http://sus
 Patches for WIEN2k 18.2
 -----------------------
 
+- Place atom_read.patch into $WIENROOT/SRC_dstart
+- Apply the patch with: patch -b atom_read.F atom_read.patch
+- Recompile
+Description: Parallel dstart (dstart -p) clmsum fix.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17838.html
+
 - Place Makefile.orig.patch into $WIENROOT/SRC_cif2struct
 - Apply the patch with: patch -b Makefile.orig Makefile.orig.patch 
 - In .siteconfig, do a Save and Quit of the Compiling Option, then Recompile
