@@ -16,6 +16,12 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17807
 Description: Fixes Jacbian to Jacobian so that the mixer does not crash.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17863.html
 
+- Place seclr4.patch into $WIENROOT/SRC_lapw1
+- Apply the patch with: patch -b seclr4.F seclr4.patch
+- Recompile
+Description: Enables use of ELPA versions from 2017 and onward.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17832.html
+
 - Place siteconfig_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b siteconfig_lapw siteconfig_lapw.patch
 Description: Changes script from csh to tcsh.  For systems that do not use a csh symbolic link to tcsh,
