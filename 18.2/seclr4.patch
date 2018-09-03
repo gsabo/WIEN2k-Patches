@@ -1,0 +1,112 @@
+1,3d0
+< #ifdef ELPA
+< !#include "config-f90.h"
+< #endif
+17c14
+<                            elpa_switch, scala_switch, elpa_mem_default
+---
+>                            lcolhs, elpa_switch, scala_switch, elpa_mem_default
+37c34,37
+< #ifdef ELPA      
+---
+> 
+> #ifdef ELPA
+> #ifdef ELPA15      
+> !!! ELPA versions before 2017
+48a49,55
+> !!! ELPA versions elpa2017 or newer
+>       use elpa
+>       IMPLICIT NONE
+>       INCLUDE 'mpif.h'    
+>       INCLUDE 'param.inc'
+> #endif
+> #else
+51a59
+> 
+132a141,142
+> #ifdef ELPA15
+> !!! ELPA versions before 2017
+133a144,148
+> #else
+> !!! ELPA versions elpa2017 or newer
+>       integer success
+>       class(elpa_t), pointer :: elpa_pt
+> #endif
+252a268
+> #ifdef old_scalapack
+253a270,273
+> #else
+> !_REAL     LWORK=nint(dble(WORK(1)))
+> !_COMPLEX  LWORK=nint(dble(WORK(1)))+(clustersize-1)*HSROWS
+> #endif
+384d403
+< !!!      elpa_switch=.true.
+514,515d532
+<       
+< !      print*, 'ELPA:',elpa_switch, 'SCALA:', scala_switch    !!! DEBUG
+518d534
+< !!!   if(elpa_switch.and.EU.lt.9.d9) then
+520,526d535
+<         mpierr=get_elpa_row_col_comms(mpi_comm_world, myrowhs, mycolhs, &
+<                                         mpi_comm_rows, mpi_comm_cols)
+<                                       
+< !        if(myid.eq.0) print*, 'Past split communicator setup for rows and columns.'   !!! DEBUG
+<       
+< !        if(myid.eq.0) print*, 'Entering two-step ELPA solver ... '                    !!! DEBUG
+<         
+529a539,544
+> #ifdef ELPA15
+> !!! ELPA versions before 2017
+> 
+>         mpierr=get_elpa_row_col_comms(mpi_comm_world, myrowhs, mycolhs, &
+>                                         mpi_comm_rows, mpi_comm_cols)
+>                                       
+533,538c548
+< !_COMPLEX                                     blocksize, lcolz, mpi_comm_rows, mpi_comm_cols, mpi_comm_world)                           
+< !        if(.not.(success)) then                                                         !!! DEBUG
+< !           if(myid.eq.0) print*, 'Error in two-step ELPA solver.'                       !!! DEBUG
+< !        else                                                                            !!! DEBUG
+< !           if(myid.eq.0) print*, 'Sucessfully finished two-step ELPA solver.'           !!! DEBUG
+< !        endif                                                                           !!! DEBUG
+---
+> !_COMPLEX                                     blocksize, lcolz, mpi_comm_rows, mpi_comm_cols, mpi_comm_world)                          
+540c550,559
+<       endif
+---
+> #else 
+> !!! ELPA versions elpa2017 or newer
+>         
+>         if (elpa_init(20180501) /= elpa_ok) then
+>             print*, "ELPA API version not supported"
+>             stop
+>         endif
+>         elpa_pt => elpa_allocate ()
+> 
+> ! set parameters
+542c561,584
+<             
+---
+> call elpa_pt%set("na", dimmatrix, success)
+> call elpa_pt%set("nev", number_of_eigenvalues, success)
+> call elpa_pt%set("local_nrows", ldhs, success)
+> call elpa_pt%set("local_ncols", lcolhs, success)
+> call elpa_pt%set("nblk", blocksize, success)
+> call elpa_pt%set("mpi_comm_parent", mpi_comm_world, success)
+> call elpa_pt%set("process_row", myrowhs, success)
+> call elpa_pt%set("process_col", mycolhs, success)
+> 
+> success = elpa_pt%setup()
+> 
+> call elpa_pt%set("solver", elpa_solver_2stage, success)
+> 
+> ! eigenvectors
+> 
+> call elpa_pt%eigenvectors(H,eigval,z,success)
+> 
+> ! cleanup
+> call elpa_deallocate(elpa_pt)
+> 
+> call elpa_uninit()
+> #endif
+> 
+>       endif
