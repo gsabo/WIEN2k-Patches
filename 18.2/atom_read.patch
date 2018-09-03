@@ -1,0 +1,51 @@
+--- atom_read.F	2018-08-16 10:23:22.796707924 +0200
++++ atom_read.F.fixed	2018-08-16 10:39:56.585078551 +0200
+@@ -41,7 +41,7 @@
+ 
+ if (iloop .eq. 0) then
+ 
+- read(52,1970) iscf                                               
++ read(52,1971) iscf
+         read(52,78) title,lattic,aa,bb,cc,jrj(1)                         
+         read(52,77)
+ 
+@@ -55,11 +55,11 @@
+ 
+ imax=jrj(ia)
+ 
+- read(52,1990) iamist
++ read(52,1991) iamist
+ !read(52,1990,end=889) iamist
+ !889 print*,'imis',iamist
+  write(51,1990) ia                       
+-     read(52,2771) lmmaxmist
++     read(52,2772) lmmaxmist
+ 
+ 
+                           
+@@ -70,7 +70,7 @@
+  allocate (rholm(imax,ncom1))          
+ do  lm1=1,lmmax(ia)
+                                    
+-        read(52,2011)    imist,jmist
++        read(52,2012)    imist,jmist
+          
+         read(52,2021,end=888,err=888)  ( rholm(j,lm1), j=1,jrj(ia) )   
+         read(52,2031) 
+@@ -100,12 +100,16 @@
+  78   format(1x,a20,a4,3f10.6,i5)
+  1970 format(3x,'             TOTAL CHARGE DENSITY GENERATED ',        &
+        'BY',i3,'. ITERATION (NORM: CLM=CLM*R*R)')                 
++ 1971 format(49x,i3,31x)
+  1980  format(3x)                                                       
+  2771  format(3x,'NUMBER OF LM',I3//)                                  
++ 2772  format(15x,I3//)
+  2011  format(3x,'CLM(R) FOR L',I3,3X,'M=',I2/)                        
++ 2012  format(15x,I3,5X,I2/)
+  2031  format(/)                                                        
+  2033  format(///)                                                      
+  1990 FORMAT(3X,'ATOMNUMBER =',I3,5X,10A4)       
++ 1991 FORMAT(15X,I3,5X,10A4)
+  2021 FORMAT(3X,4ES19.12)         
+ 
+    end subroutine atom_read
