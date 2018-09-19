@@ -33,3 +33,9 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17832
 Description: Changes script from csh to tcsh.  For systems that do not use a csh symbolic link to tcsh,
 the script stops with a "Word too long" error on "alias update_makefiles".
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17866.html
+
+- Place write_inwf_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b write_inwf_lapw write_inwf_lapw.patch
+Description: Replaces old version 1.0 of write_inwf_lapw with newer version 2.0 of write_inwf_lapw.
+Version 2.0 of write_inwf_lapw for wien2wannier contains a fix for spin polarized cases.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17959.html
