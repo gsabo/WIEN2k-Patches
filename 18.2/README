@@ -13,7 +13,7 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17838
 - Apply the patch with: patch -b Makefile.orig Makefile.orig.patch 
 - In .siteconfig, do a Save and Quit of the Compiling Option, then Recompile
 Description: Removes "ifort: warning #10315: specifying -lm before files may supersede the Intel(R) math library and affect performance
-" when using the Intel Fortran compil$WIENROOTer (ifort).
+" when using the Intel Fortran compiler (ifort).
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17807.html
 
 - Place ScaleDiag.patch into $WIENROOT/SRC_mixer
