@@ -2,3 +2,7 @@
 <         Jacbian=0 
 ---
 >         Jacobian=0 
+38c38
+<         call dgemm('N', 'N', MAXMIX, MEMORY, MEMORY, 1.D0, Y, MAXMIX, W, MEMORY, 0.0, W2, MAXMIX)
+---
+>         call dgemm('N', 'N', MAXMIX, MEMORY, MEMORY, 1.D0, Y, MAXMIX, W, MEMORY, 0.D0, W2, MAXMIX)
