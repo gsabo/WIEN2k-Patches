@@ -19,8 +19,9 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17807
 - Place ScaleDiag.patch into $WIENROOT/SRC_mixer
 - Apply the patch with: patch -b ScaleDiag.F ScaleDiag.patch
 - Recompile
-Description: Fixes Jacbian to Jacobian so that the mixer does not crash.
+Description: Fixes Jacbian to Jacobian and zero so that the mixer does not crash.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17863.html
+           https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg18038.html
 
 - Place seclr4.patch into $WIENROOT/SRC_lapw1
 - Apply the patch with: patch -b seclr4.F seclr4.patch
