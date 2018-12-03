@@ -16,6 +16,11 @@ Description: Removes "ifort: warning #10315: specifying -lm before files may sup
 " when using the Intel Fortran compiler (ifort).
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17807.html
 
+- Place run_deltagllb_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b run_deltagllb_lapw run_deltagllb_lapw.patch
+Description: Fixes run_deltagllb_lapw's moving of .vsp* and .vns* files.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg18207.html
+
 - Place ScaleDiag.patch into $WIENROOT/SRC_mixer
 - Apply the patch with: patch -b ScaleDiag.F ScaleDiag.patch
 - Recompile
