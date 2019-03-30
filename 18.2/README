@@ -9,9 +9,14 @@ Patches for WIEN2k 18.2
 Description: Parallel dstart (dstart -p) clmsum fix.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17838.html
 
+- Place initso_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b initso_lapw initso_lapw.patch
+Description: Fix for when the script goes into a number of non-equivalent atoms changed case to remove the error "0: Event not found".
+Reference:
+
 - Place Makefile.orig.patch into $WIENROOT/SRC_cif2struct
 - Apply the patch with: patch -b Makefile.orig Makefile.orig.patch 
-- In .siteconfig, do a Save and Quit of the Compiling Option, then Recompile
+- In ./siteconfig, do a Save and Quit of the Compiling Option, then Recompile
 Description: Removes "ifort: warning #10315: specifying -lm before files may supersede the Intel(R) math library and affect performance
 " when using the Intel Fortran compiler (ifort).
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg17807.html
