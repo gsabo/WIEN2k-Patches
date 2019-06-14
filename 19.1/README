@@ -1,0 +1,10 @@
+Installing or upgrading to WIEN2k 19.1, refer to the WIEN2k website [ http://susi.theochem.tuwien.ac.at/ ].
+
+Patches for WIEN2k 19.1
+-----------------------
+
+- Place siteconfig_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b siteconfig_lapw siteconfig_lapw.patch
+Description: Changes script from csh to tcsh.  For systems that do not use a csh symbolic link to tcsh,
+the script stops with a "Word too long" error on "alias update_makefiles".
+Reference: 
