@@ -9,4 +9,5 @@ Description:
 1) Changes script from csh to tcsh.  For systems that do not use a csh symbolic link to tcsh,
 the script stops with a "Word too long" error on "alias update_makefiles".
 2) Path fix for auto detected libxc.
-Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg18722.html
+References: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg18722.html
+            https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg18723.html
