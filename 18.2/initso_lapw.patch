@@ -1,4 +1,0 @@
-306c306
-<         echo "The number of non-equivalent atoms has changed !!!"
----
->         echo "The number of non-equivalent atoms has changed \!\!\!"
