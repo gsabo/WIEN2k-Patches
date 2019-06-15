@@ -6,8 +6,8 @@ Patches for WIEN2k 19.1
 - Place siteconfig_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b siteconfig_lapw siteconfig_lapw.patch
 Description:
+Temporary fix until a permenant solution becomes available
 1) Changes script from csh to tcsh.  For systems that do not use a csh symbolic link to tcsh,
 the script stops with a "Word too long" error on "alias update_makefiles".
 2) Path fix for auto detected libxc.
-References: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg18722.html
-            https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg18723.html
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg18738.html
