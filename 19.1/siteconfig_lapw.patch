@@ -2,9 +2,3 @@
 < #!/bin/csh -f
 ---
 > #!/bin/tcsh -f
-1096a1097
->               set LIBXC_DNAME = `basename $tmp_xc`
-1099c1100
-<               set LIBXC_DNAME = `basename $tmp_xc`
----
->               set LIBXC_LIBDNAME = `basename $tmp_xc`
