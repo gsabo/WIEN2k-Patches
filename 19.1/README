@@ -11,3 +11,8 @@ Temporary workaround - To be replaced by bash script in future release
 the script stops with a "Word too long" error on "alias update_makefiles".
 2) Path fix for auto detected libxc.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg18742.html
+
+- Place x_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b x_lapw x_lapw.patch
+Description: Fix for lapw2 unit 15 error (needed only for WIEN2k compiled with gfortran)
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg18771.html
