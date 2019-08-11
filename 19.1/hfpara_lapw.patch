@@ -1,0 +1,10 @@
+24a25
+> set so
+133c134
+<     set so = 'so'
+---
+>     set so = '-so'
+464c465
+< $bin/x sumhfpara $cmplxm $updn1 $band $gw $nmrhf $redklist $vnonloc -d 
+---
+> $bin/x sumhfpara $cmplxm $updn1 $band $gw $nmrhf $redklist $so $vnonloc -d 
