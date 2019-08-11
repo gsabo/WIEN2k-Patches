@@ -3,6 +3,11 @@ Installing or upgrading to WIEN2k 19.1, refer to the WIEN2k website [ http://sus
 Patches for WIEN2k 19.1
 -----------------------
 
+- Place hfpara_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b hfpara_lapw hfpara_lapw.patch
+Description: Fix for parallel hf so calculations.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg18833.html
+
 - Place siteconfig_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b siteconfig_lapw siteconfig_lapw.patch
 Description:
