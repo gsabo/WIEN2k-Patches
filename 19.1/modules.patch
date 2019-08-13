@@ -1,0 +1,4 @@
+93d92
+<              if(line(i:i+3).eq.'ELPA') elpa_switch=.true.
+96a96
+>              if(line(i:i+3).eq.'ELPA') elpa_switch=.true.
