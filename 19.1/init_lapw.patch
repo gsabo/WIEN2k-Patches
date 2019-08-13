@@ -1,0 +1,16 @@
+99c99
+<        echo lmax set to minimal value (8)
+---
+>        echo "lmax set to minimal value (8)"
+103c103
+<        echo lmax set to maximal value (12)
+---
+>        echo "lmax set to maximal value (12)"
+110c110
+<        echo lvns set to minimal value (4)
+---
+>        echo "lvns set to minimal value (4)"
+114c114
+<        echo lvns set to maximal value (10)
+---
+>        echo "lvns set to maximal value (10)"
