@@ -18,6 +18,12 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg18841
 Description: Fix for cases WITH inversion symmetry when init_so_lapw is ran several times.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg18801.html
 
+- Place modules.patch into $WIENROOT/SRC_lapw1
+- Apply the patch with: patch -b modules.F modules.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> lapw1
+Description: Fix for MPI parallel of lapw1 (lapw1_mpi) that happens only when compiled without ELPA.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg18777.html
+
 - Place siteconfig_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b siteconfig_lapw siteconfig_lapw.patch
 Description:
