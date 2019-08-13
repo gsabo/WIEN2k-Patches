@@ -10,8 +10,13 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg18833
 
 - Place init_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b init_lapw init_lapw.patch
-Description: Removes "Badly placed ()'s" error when a lmax value is used beyond its limits during init_lapw. 
+Description: Removes "Badly placed ()'s" error when a lmax or lvns value is used beyond its limits during init_lapw. 
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg18841.html
+
+- Place init_so_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b init_so_lapw init_so_lapw.patch
+Description: Fix for cases WITH inversion symmetry when init_so_lapw is ran several times.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg18801.html
 
 - Place siteconfig_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b siteconfig_lapw siteconfig_lapw.patch
