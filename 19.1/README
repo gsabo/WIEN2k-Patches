@@ -8,6 +8,11 @@ Patches for WIEN2k 19.1
 Description: Fix for parallel hf so calculations.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg18833.html
 
+- Place init_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b init_lapw init_lapw.patch
+Description: Removes "Badly placed ()'s" error when a lmax value is used beyond its limits during init_lapw. 
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg18841.html
+
 - Place siteconfig_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b siteconfig_lapw siteconfig_lapw.patch
 Description:
