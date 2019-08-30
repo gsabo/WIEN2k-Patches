@@ -28,9 +28,8 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg18777
 - Apply the patch with: patch -b siteconfig_lapw siteconfig_lapw.patch
 Description:
 Temporary workaround - To be replaced by bash script in future release
-1) Changes script from csh to tcsh.  For systems that do not use a csh symbolic link to tcsh,
+Changes script from csh to tcsh.  For systems that do not use a csh symbolic link to tcsh,
 the script stops with a "Word too long" error on "alias update_makefiles".
-2) Path fix for auto detected libxc.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg18742.html
 
 - Place x_lapw.patch into $WIENROOT
