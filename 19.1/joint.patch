@@ -1,0 +1,8 @@
+108c108
+<           if(fname(i-6:i).eq.'mmat1up') then 
+---
+>           if(fname(i-5:i).eq.'mma1up') then 
+112c112
+<            if(fname(i-6:i).eq.'mmat1dn') then
+---
+>            if(fname(i-5:i).eq.'mma1dn') then
