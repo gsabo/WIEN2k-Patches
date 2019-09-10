@@ -22,7 +22,7 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg18801
 - Apply the patch with: patch -b joint.f joint.patch
 - Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> joint
 Description: Fix for XMCD calculations since files symmat1/2 were changed to symma1/2
-Reference: http://susi.theochem.tuwien.ac.at/reg_user/updates/
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19006.html
 
 - Place modules.patch into $WIENROOT/SRC_lapw1
 - Apply the patch with: patch -b modules.F modules.patch
