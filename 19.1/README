@@ -12,7 +12,7 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg18833
 - Apply the patch with: patch -b init.f init.patch
 - Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> orb
 Description: Fix under test for more than 100 atoms with SO and orb
-Reference: 
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19227.html
 
 - Place init_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b init_lapw init_lapw.patch
