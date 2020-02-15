@@ -36,6 +36,11 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19006
 Description: Fix for MPI parallel of lapw1 (lapw1_mpi) that happens only when compiled without ELPA.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg18777.html
 
+- Place opticpara_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b opticpara_lapw opticpara_lapw.patch 
+Description: Optic parallel -hf calculation fix.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19229.html
+
 - Place siteconfig_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b siteconfig_lapw siteconfig_lapw.patch
 Description:
