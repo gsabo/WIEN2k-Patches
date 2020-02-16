@@ -59,6 +59,11 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19229
 Description: Initialization of variable fix for "x lapw2 -almd".
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19011.html
 
+- Place runafm_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b runafm_lapw runafm_lapw.patch
+Description: Fix of runafm_lapw to remove vresp error.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19088.html
+
 - Place siteconfig_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b siteconfig_lapw siteconfig_lapw.patch
 Description:
