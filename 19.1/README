@@ -53,6 +53,12 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg18777
 Description: Optic parallel -hf calculation fix.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19229.html
 
+- Place qdmft.patch into $WIENROOT/SRC_lapw2
+- Apply the patch with: patch -b qdmft.F qdmft.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> lapw2
+Description: Initialization of variable fix for "x lapw2 -almd".
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19011.html
+
 - Place siteconfig_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b siteconfig_lapw siteconfig_lapw.patch
 Description:
