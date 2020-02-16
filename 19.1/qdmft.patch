@@ -1,0 +1,4 @@
+12c12
+<   INTEGER :: nbnd_dmft
+---
+>   INTEGER :: nbnd_dmft, lmax_to_dmft
