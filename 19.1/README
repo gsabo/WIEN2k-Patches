@@ -15,6 +15,13 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19005
 Description: Improvement that always DOS calculation of a desired k-point.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19005.html
 
+- Place clean_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b clean_lapw clean_lapw.patch
+Description: The csh foreach function is limited to 999 arguments.
+When the number of parallel files in the case directory exceeds
+999, a "foreach: Too many arguments" error occurs.  This replaces
+csh with tcsh as tcsh is not limited to 999 arugments for the foreach function. 
+
 - Place coors.patch into $WIENROOT/SRC_lapw1
 - Apply the patch with: patch -b coors.f coors.patch
 - Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> lapw1
