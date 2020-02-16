@@ -3,6 +3,18 @@ Installing or upgrading to WIEN2k 19.1, refer to the WIEN2k website [ http://sus
 Patches for WIEN2k 19.1
 -----------------------
 
+- Place ados.patch into $WIENROOT/SRC_tetra
+- Apply the patch with: patch -b ados.f ados.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> tetra
+Description: Improvement that always DOS calculation of a desired k-point.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19005.html
+
+- Place arbdos.patch into $WIENROOT/SRC_tetra
+- Apply the patch with: patch -b arbdos.f arbdos.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> tetra
+Description: Improvement that always DOS calculation of a desired k-point.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19005.html
+
 - Place hfpara_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b hfpara_lapw hfpara_lapw.patch
 Description: Fix for parallel hf so calculations.
@@ -48,6 +60,12 @@ Temporary workaround - To be replaced by bash script in future release
 Changes script from csh to tcsh.  For systems that do not use a csh symbolic link to tcsh,
 the script stops with a "Word too long" error on "alias update_makefiles".
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg18742.html
+
+- Place tetra.patch into $WIENROOT/SRC_tetra
+- Apply the patch with: patch -b tetra.f tetra.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> tetra
+Description: Improvement that always DOS calculation of a desired k-point.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19005.html
 
 - Place x_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b x_lapw x_lapw.patch
