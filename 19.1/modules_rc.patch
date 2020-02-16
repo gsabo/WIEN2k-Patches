@@ -1,0 +1,4 @@
+19c19
+<   real(DPk), parameter :: MAT_TOL = 1e-10_DPk, PHASE_TOL = 1e-10_DPk
+---
+>   real(DPk), parameter :: MAT_TOL = 1e-6_DPk, PHASE_TOL = 1e-10_DPk
