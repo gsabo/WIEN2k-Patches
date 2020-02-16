@@ -48,6 +48,12 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19006
 Description: Fix for MPI parallel of lapw1 (lapw1_mpi) that happens only when compiled without ELPA.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg18777.html
 
+- Place modules_rc.patch into $WIENROOT/SRC_wplot
+- Apply the patch with: patch -b modules_rc.F modules_rc.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> wplot
+Description: Fix for local rotation matrix error with wplot.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19093.html
+
 - Place opticpara_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b opticpara_lapw opticpara_lapw.patch 
 Description: Optic parallel -hf calculation fix.
