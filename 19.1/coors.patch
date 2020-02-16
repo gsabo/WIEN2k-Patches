@@ -1,0 +1,29 @@
+20c20
+<       INTEGER            NAT, NT, nmatmax1,numemin
+---
+>       INTEGER            NAT, NT, nmatmax1,numemin,iplus
+50a51
+>       iplus=0
+68,70c69,72
+<       nvec1loc=nvec1
+<       nvec2loc=nvec2
+<       nvec3loc=nvec3
+---
+>  111  continue
+>       nvec1loc=nvec1+iplus
+>       nvec2loc=nvec2+iplus
+>       nvec3loc=nvec3+iplus
+182a185,195
+> !     check if nvec1,2,3 are large enough
+>       if(nv.eq.0) then      !first pass
+>         NV = N
+>         iplus=1
+>         goto 111
+>       else if(nv.ne.n) then     ! not ok
+>         write(6,*) 'coors: iplus,nv,n=',iplus, nv,n
+>         NV = N
+>         iplus=iplus+1
+>         goto 111
+>       endif
+183a197
+>          
