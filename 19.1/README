@@ -109,6 +109,11 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19244
 Description: Improvement that always DOS calculation of a desired k-point.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19005.html
 
+- Place w2web.patch into $WIENROOT/SRC_w2web/bin
+- Apply the patch with: patch -b w2web w2web.patch
+Description: Fix for w2web accept and deny.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19436.html
+
 - Place x_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b x_lapw x_lapw.patch
 Description: Fix for lapw2 unit 15 error (needed only for WIEN2k compiled with gfortran)
