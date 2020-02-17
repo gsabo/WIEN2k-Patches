@@ -1,0 +1,7 @@
+77d76
+< 
+240a240,241
+>               ei=elo(l,nloat)/2.d0
+>               write(6,*)'rlo set at energy:',ei
+359d359
+< 
