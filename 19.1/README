@@ -15,6 +15,12 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19005
 Description: Improvement that always DOS calculation of a desired k-point.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19005.html
 
+- Place atpar.patch into $WIENROOT/SRC_lapw2
+- Apply the patch with: patch -b atpar.F atpar.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> lapw2
+Description: Fix for RLOs in spin orbit calculations that do not have p-semicore states.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19246.html
+
 - Place clean_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b clean_lapw clean_lapw.patch
 Description: The csh foreach function is limited to 999 arguments.
