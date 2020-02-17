@@ -1,8 +1,8 @@
 112c112
-<           qdmft.o read_vec.o recpr.o setfft1.o setfft2.o stern.o ALMDPrint.o 
+<           qdmft.o read_vec.o recpr.o setfft1.o setfft2.o stern.o 
 ---
->           qdmft.o read_vec.o recpr.o setfft1.o setfft2.o stern.o 
+>           qdmft.o read_vec.o recpr.o setfft1.o setfft2.o stern.o ALMDPrint.o
 115c115
-<           l2main.o lapw2.o modules.o qdmft.o read_vec.o W2kinit.o ALMDPrint.o 
+<           l2main.o lapw2.o modules.o qdmft.o read_vec.o W2kinit.o 
 ---
->           l2main.o lapw2.o modules.o qdmft.o read_vec.o W2kinit.o 
+>           l2main.o lapw2.o modules.o qdmft.o read_vec.o W2kinit.o ALMDPrint.o
