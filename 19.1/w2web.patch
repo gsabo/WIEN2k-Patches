@@ -1,0 +1,10 @@
+386,387c386,387
+< if (@deny && &ip_match($acptip, @deny) ||
+<     @allow && !&ip_match($acptip, @allow)) {
+---
+> if (@deny && &ip_match($acptip, @deny)) {
+>     if (!@allow || !&ip_match($acptip, @allow)) {
+389a390
+> }
+819a821
+> 	$i =~ s/\*/0/g;
