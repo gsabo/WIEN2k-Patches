@@ -91,6 +91,12 @@ Changes script from csh to tcsh.  For systems that do not use a csh symbolic lin
 the script stops with a "Word too long" error on "alias update_makefiles".
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg18742.html
 
+- Place sumpara.patch into $WIENROOT/SRC_sumpara
+- Apply the patch with: patch -b sumpara.F sumpara.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> sumpara
+Description: Fix for removing undefined $file.scfdm_vresp$updn within sumpara.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19244.html
+
 - Place tetra.patch into $WIENROOT/SRC_tetra
 - Apply the patch with: patch -b tetra.f tetra.patch
 - Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> tetra
