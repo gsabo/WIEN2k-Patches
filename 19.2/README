@@ -3,3 +3,7 @@ Installing or upgrading to WIEN2k 19.2, refer to the WIEN2k website [ http://sus
 Patches for WIEN2k 19.2
 -----------------------
 
+- Place WIEN2k_VERSION.patch into $WIENROOT
+- Apply the patch with: patch -b WIEN2k_VERSION WIEN2k_VERSION.patch
+Description: Corrects version from 19.1 to 19.2 to match the current version on the WIEN2k page at
+http://susi.theochem.tuwien.ac.at/
