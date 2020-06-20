@@ -3,6 +3,18 @@ Installing or upgrading to WIEN2k 19.2, refer to the WIEN2k website [ http://sus
 Patches for WIEN2k 19.2
 -----------------------
 
+- Place inputpars.patch into $WIENROOT/SRC_lapw0
+- Apply the patch with: patch -b inputpars.F inputpars.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> lapw0
+Description: Patch for using libxc 5.0.0 when applied along with libxc.patch
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg20202.html
+
+- Place libxc.patch into $WIENROOT/SRC_lapw0
+- Apply the patch with: patch -b libxc.F libxc.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> lapw0
+Description: Patch for using libxc 5.0.0 when applied along with inputpars.patch
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg20202.html
+
 - Place WIEN2k_VERSION.patch into $WIENROOT
 - Apply the patch with: patch -b WIEN2k_VERSION WIEN2k_VERSION.patch
 Description: Corrects version from 19.1 to 19.2 to match the current version on the WIEN2k page at
