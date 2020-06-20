@@ -8,79 +8,84 @@
 ---
 >       TYPE(xc_f90_func_t) :: xc_func
 >       TYPE(xc_f90_func_info_t) :: xc_info
-42,43c42,43
+30a31,34
+>          
+>          integer*8 i1 ! Fix to force integer 4 to integer 8
+> 
+>       i1 = 1
+42,43c46,47
 <          call xc_f03_func_init(xc_func,id_func,XC_UNPOLARIZED)
 <          xc_info = xc_f03_func_get_info(xc_func)
 ---
 >          call xc_f90_func_init(xc_func,id_func,XC_UNPOLARIZED)
 >          xc_info = xc_f90_func_get_info(xc_func)
-47c47
+47c51
 <             call xc_f03_func_set_ext_params(xc_func,xcconstvec)
 ---
 >             call xc_f90_func_set_ext_params(xc_func,xcconstvec)
-50c50
+50c54
 <          select case(xc_f03_func_info_get_family(xc_info))
 ---
 >          select case(xc_f90_func_info_get_family(xc_info))
-56c56
+56c60
 <             call xc_f03_lda_exc_vxc(xc_func,1,rho(1),exc(1),vrho(1))
 ---
->             call xc_f90_lda_exc_vxc(xc_func,1,rho(1),exc(1),vrho(1))
-69c69
+>             call xc_f90_lda_exc_vxc(xc_func,i1,rho(1),exc(1),vrho(1))
+69c73
 <                call xc_f03_gga_vxc(xc_func,1,rho(1),sigma(1),vrho(1),vsigma(1))
 ---
->                call xc_f90_gga_vxc(xc_func,1,rho(1),sigma(1),vrho(1),vsigma(1))
-76,77c76,77
+>                call xc_f90_gga_vxc(xc_func,i1,rho(1),sigma(1),vrho(1),vsigma(1))
+76,77c80,81
 <                call xc_f03_gga_exc_vxc(xc_func,1,rho(1),sigma(1),exc(1),vrho(1),vsigma(1))
 <                call xc_f03_gga_fxc(xc_func,1,rho(1),sigma(1),v2rho2(1),v2rhosigma(1),v2sigma2(1))
 ---
->                call xc_f90_gga_exc_vxc(xc_func,1,rho(1),sigma(1),exc(1),vrho(1),vsigma(1))
->                call xc_f90_gga_fxc(xc_func,1,rho(1),sigma(1),v2rho2(1),v2rhosigma(1),v2sigma2(1))
-97c97
+>                call xc_f90_gga_exc_vxc(xc_func,i1,rho(1),sigma(1),exc(1),vrho(1),vsigma(1))
+>                call xc_f90_gga_fxc(xc_func,i1,rho(1),sigma(1),v2rho2(1),v2rhosigma(1),v2sigma2(1))
+97c101
 <                call xc_f03_mgga_vxc(xc_func,1,rho(1),sigma(1),lapl_rho(1),tau(1), &
 ---
->                call xc_f90_mgga_vxc(xc_func,1,rho(1),sigma(1),lapl_rho(1),tau(1), &
-103c103
+>                call xc_f90_mgga_vxc(xc_func,i1,rho(1),sigma(1),lapl_rho(1),tau(1), &
+103c107
 <                call xc_f03_mgga_exc(xc_func,1,rho(1),sigma(1),lapl_rho(1),tau(1),exc(1))
 ---
->                call xc_f90_mgga_exc(xc_func,1,rho(1),sigma(1),lapl_rho(1),tau(1),exc(1))
-112,113c112,113
+>                call xc_f90_mgga_exc(xc_func,i1,rho(1),sigma(1),lapl_rho(1),tau(1),exc(1))
+112,113c116,117
 <          call xc_f03_func_init(xc_func,id_func,XC_POLARIZED)
 <          xc_info = xc_f03_func_get_info(xc_func)
 ---
 >          call xc_f90_func_init(xc_func,id_func,XC_POLARIZED)
 >          xc_info = xc_f90_func_get_info(xc_func)
-117c117
+117c121
 <             call xc_f03_func_set_ext_params(xc_func,xcconstvec)
 ---
 >             call xc_f90_func_set_ext_params(xc_func,xcconstvec)
-120c120
+120c124
 <          select case(xc_f03_func_info_get_family(xc_info))
 ---
 >          select case(xc_f90_func_info_get_family(xc_info))
-127c127
+127c131
 <             call xc_f03_lda_exc_vxc(xc_func,1,rho(1),exc(1),vrho(1))
 ---
->             call xc_f90_lda_exc_vxc(xc_func,1,rho(1),exc(1),vrho(1))
-162c162
+>             call xc_f90_lda_exc_vxc(xc_func,i1,rho(1),exc(1),vrho(1))
+162c166
 <                call xc_f03_gga_vxc(xc_func,1,rho(1),sigma(1),vrho(1),vsigma(1))
 ---
->                call xc_f90_gga_vxc(xc_func,1,rho(1),sigma(1),vrho(1),vsigma(1))
-169,170c169,170
+>                call xc_f90_gga_vxc(xc_func,i1,rho(1),sigma(1),vrho(1),vsigma(1))
+169,170c173,174
 <                call xc_f03_gga_exc_vxc(xc_func,1,rho(1),sigma(1),exc(1),vrho(1),vsigma(1))
 <                call xc_f03_gga_fxc(xc_func,1,rho(1),sigma(1),v2rho2(1),v2rhosigma(1),v2sigma2(1))
 ---
->                call xc_f90_gga_exc_vxc(xc_func,1,rho(1),sigma(1),exc(1),vrho(1),vsigma(1))
->                call xc_f90_gga_fxc(xc_func,1,rho(1),sigma(1),v2rho2(1),v2rhosigma(1),v2sigma2(1))
-228c228
+>                call xc_f90_gga_exc_vxc(xc_func,i1,rho(1),sigma(1),exc(1),vrho(1),vsigma(1))
+>                call xc_f90_gga_fxc(xc_func,i1,rho(1),sigma(1),v2rho2(1),v2rhosigma(1),v2sigma2(1))
+228c232
 <                call xc_f03_mgga_vxc(xc_func,1,rho(1),sigma(1),lapl_rho(1),tau(1), &
 ---
->                call xc_f90_mgga_vxc(xc_func,1,rho(1),sigma(1),lapl_rho(1),tau(1), &
-234c234
+>                call xc_f90_mgga_vxc(xc_func,i1,rho(1),sigma(1),lapl_rho(1),tau(1), &
+234c238
 <                call xc_f03_mgga_exc(xc_func,1,rho(1),sigma(1),lapl_rho(1),tau(1),exc(1))
 ---
->                call xc_f90_mgga_exc(xc_func,1,rho(1),sigma(1),lapl_rho(1),tau(1),exc(1))
-243c243
+>                call xc_f90_mgga_exc(xc_func,i1,rho(1),sigma(1),lapl_rho(1),tau(1),exc(1))
+243c247
 <       call xc_f03_func_end(xc_func)
 ---
 >       call xc_f90_func_end(xc_func)
