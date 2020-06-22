@@ -3,16 +3,22 @@ Installing or upgrading to WIEN2k 19.2, refer to the WIEN2k website [ http://sus
 Patches for WIEN2k 19.2
 -----------------------
 
+- Place init_orb_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b init_orb_lapw init_orb_lapw.patch
+Description: Fix for when gets stuck with repeated "You need to specify 4 values"
+and correct spelling in help from "init_borb_lapw" to "init_orb_lapw".
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19891.html
+
 - Place inputpars.patch into $WIENROOT/SRC_lapw0
 - Apply the patch with: patch -b inputpars.F inputpars.patch
 - Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> lapw0
-Description: Patch for using libxc 5.0.0 when applied along with libxc.patch
+Description: Patch for using libxc 5.0.0 when applied along with libxc.patch.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg20202.html
 
 - Place libxc.patch into $WIENROOT/SRC_lapw0
 - Apply the patch with: patch -b libxc.F libxc.patch
 - Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> lapw0
-Description: Patch for using libxc 5.0.0 when applied along with inputpars.patch
+Description: Patch for using libxc 5.0.0 when applied along with inputpars.patch.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg20202.html
 
 - Place WIEN2k_VERSION.patch into $WIENROOT
