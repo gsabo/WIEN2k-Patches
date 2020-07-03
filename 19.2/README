@@ -21,6 +21,12 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg20202
 Description: Patch for using libxc 5.0.0 when applied along with inputpars.patch.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg20202.html
 
+- Place modules_rc.patch into $WIENROOT/SRC_w2w
+- Apply the patch with: patch -b modules_rc.F modules_rc.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> w2w
+Description: Patch to allow more than 1000 bands with wien2wannier.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19849.html
+
 - Place runsp_c_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b runsp_c_lapw runsp_c_lapw.patch
 Description: Changes csh to tsch and sets vresp in defaults to resolve "vresp: Undefined variable". 
