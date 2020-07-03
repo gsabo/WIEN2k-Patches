@@ -1,0 +1,10 @@
+875c875
+<   real(r8) :: E(1000)
+---
+>   real(r8), dimension(:), allocatable :: E
+895a896,897
+>      allocate( E(NE) )
+> 
+908a911,912
+> 
+>      deallocate( E )
