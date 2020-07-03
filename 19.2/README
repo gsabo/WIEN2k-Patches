@@ -21,6 +21,11 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg20202
 Description: Patch for using libxc 5.0.0 when applied along with inputpars.patch.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg20202.html
 
+- Place runsp_c_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b runsp_c_lapw runsp_c_lapw.patch
+Description: Changes csh to tsch and sets vresp in defaults to resolve "vresp: Undefined variable". 
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19924.html
+
 - Place WIEN2k_VERSION.patch into $WIENROOT
 - Apply the patch with: patch -b WIEN2k_VERSION WIEN2k_VERSION.patch
 Description: Corrects version from 19.1 to 19.2 to match the current version on the WIEN2k page at
