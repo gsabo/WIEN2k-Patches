@@ -25,3 +25,27 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg20202
 - Apply the patch with: patch -b WIEN2k_VERSION WIEN2k_VERSION.patch
 Description: Corrects version from 19.1 to 19.2 to match the current version on the WIEN2k page at
 http://susi.theochem.tuwien.ac.at/
+
+Fix for SRC_pes
+
+- First, download the 2020-03-13 SRC_pes.tar.gz from the WIEN2k website and install it following the instructions on the webpage at
+  http://susi.theochem.tuwien.ac.at/reg_user/updates/
+  
+- Second, if using the gfortran compiler, apply the estimate_cross.patch, periodic_table.patch, and x_lapw.patch 
+
+- Place estimate_cross.patch into $WIENROOT/SRC_pes
+- Apply the patch with: patch -b estimate_cross.f estimate_cross.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> pes
+Description: gfortran fix for 2020-03-13 SRC_pes.tar.gz.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19769.html
+
+- Place periodic_table.patch into $WIENROOT/SRC_pes
+- Apply the patch with: patch -b periodic_table.f periodic_table.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> pes
+Description: gfortran fix for 2020-03-13 SRC_pes.tar.gz.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19769.html
+
+- Place x_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b x_lapw x_lapw.patch
+Description: gfortran fix for 2020-03-13 SRC_pes.tar.gz.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19769.html
