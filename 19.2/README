@@ -35,13 +35,15 @@ Fix for SRC_pes
 
 - Place estimate_cross.patch into $WIENROOT/SRC_pes
 - Apply the patch with: patch -b estimate_cross.f estimate_cross.patch
-- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> pes
+- Recompile: In ./siteconfig -> O Comiling Options -> S Save and Quit
+             -> R Compile/Recompile -> S Select program -> pes
 Description: gfortran fix for 2020-03-13 SRC_pes.tar.gz.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19769.html
 
 - Place periodic_table.patch into $WIENROOT/SRC_pes
 - Apply the patch with: patch -b periodic_table.f periodic_table.patch
-- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> pes
+- Recompile: In ./siteconfig -> O Comiling Options -> S Save and Quit
+             -> R Compile/Recompile -> S Select program -> pes
 Description: gfortran fix for 2020-03-13 SRC_pes.tar.gz.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19769.html
 
