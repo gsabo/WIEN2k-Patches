@@ -1,0 +1,6 @@
+1c1
+< #!/bin/csh -f
+---
+> #!/bin/tcsh -f
+90a91
+> set vresp
