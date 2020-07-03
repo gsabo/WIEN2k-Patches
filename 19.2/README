@@ -26,6 +26,14 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg20202
 Description: Corrects version from 19.1 to 19.2 to match the current version on the WIEN2k page at
 http://susi.theochem.tuwien.ac.at/
 
+Fix for SRC_IRelast
+
+- The file permissions of executable scripts were not set to be executable when packaged in the tarball.
+  Set the file permissions using:
+  cd $WIENROOT/SRC_IRelast/script-elastic
+  chmod +x *
+- Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg20254.html
+
 Fix for SRC_pes
 
 - First, download the 2020-03-13 SRC_pes.tar.gz from the WIEN2k website and install it following the instructions on the webpage at
