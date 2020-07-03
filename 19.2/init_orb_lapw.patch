@@ -1,8 +1,4 @@
-1c1
-< #!/bin/csh -f
----
-> #!/bin/tcsh -f
-294c294
+305c305
 < USAGE:        init_borb_lapw [-orb -eece -b -f -c]
 ---
 > USAGE:        init_orb_lapw [-orb -eece -b -f -c]
