@@ -40,9 +40,12 @@ http://susi.theochem.tuwien.ac.at/
 Fix for SRC_IRelast
 
 - The file permissions of executable scripts were not set to be executable when packaged in the tarball.
-  Set the file permissions using:
+  Set the executable file permissions (except for initIR_lapw in the script-elastic folder
+  where initIR_lapw needs to be used and set to be executable in $WIENROOT instead) using:
   cd $WIENROOT/SRC_IRelast/script-elastic
   chmod +x *
+  chmod -x initIR_lapw
+  chmod +x $WIENROOT/initIR_lapw
 - Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg20254.html
 
 Fix for SRC_pes
