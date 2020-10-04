@@ -5,6 +5,12 @@ Patches for WIEN2k 19.2
 
 If using WIEN2k_19.2.tar downloaded before July 2, 2020, download the new WIEN2k_19.2.tar before applying the following patches.
 
+- Place findMINcboa.patch into $WIENROOT/SRC_trig
+- Apply the patch with: patch -b findMINcboa.f findMINcboa.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> trig
+Description: Volume equation fix that looks like it will only effect C/A orthorhombic cases.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg20524.html
+
 - Place init_orb_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b init_orb_lapw init_orb_lapw.patch
 Description: Corrects spelling in help from "init_borb_lapw" to "init_orb_lapw".
