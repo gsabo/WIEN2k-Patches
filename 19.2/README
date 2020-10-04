@@ -40,6 +40,12 @@ Description: For wplot calculations, fixes the numbers of the grid when Y and
 Z are diffrent.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg20304.html
 
+- Place optimize.patch into $WIENROOT/SRC_optimize
+- Apply the patch with: patch -b optimize.f optimize.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> optimize
+Description: Fix for "x optimize" option 8.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg20534.html
+
 - Place runsp_c_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b runsp_c_lapw runsp_c_lapw.patch
 Description: Changes csh to tsch and sets vresp in defaults to resolve "vresp: Undefined variable". 
