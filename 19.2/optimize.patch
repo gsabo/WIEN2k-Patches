@@ -1,0 +1,8 @@
+176c176
+<             do iii = 1,ileng+15
+---
+>             do iii = 1,ileng+19
+183c183
+<                ileng1=15
+---
+>                ileng1=19
