@@ -1,10 +1,19 @@
-875c875
+434c434
+<   complex(C16) :: projection(inwf%bmax-inwf%bmin+1, inwf%Nproj, num_kpts)
+---
+>   complex(C16), allocatable :: projection(:,:,:)
+448a449
+>   allocate(projection(Nb,inwf%Nproj,num_kpts))
+661a663,664
+> deallocate(projection)
+> 
+875c878
 <   real(r8) :: E(1000)
 ---
 >   real(r8), dimension(:), allocatable :: E
-895a896,897
+895a899,900
 >      allocate( E(NE) )
 > 
-908a911,912
+908a914,915
 > 
 >      deallocate( E )
