@@ -30,8 +30,9 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg20202
 - Place modules_rc.patch into $WIENROOT/SRC_w2w
 - Apply the patch with: patch -b modules_rc.F modules_rc.patch
 - Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> w2w
-Description: Patch to allow more than 1000 bands with wien2wannier.
+Description: Patch to allow more than 1000 bands with wien2wannier and projection segmentation fault fix.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19849.html
+           https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg20569.html
 
 - Place modules_rc_wplot.patch into $WIENROOT/SRC_wplot
 - Apply the patch with: patch -b modules_rc.F modules_rc_wplot.patch
