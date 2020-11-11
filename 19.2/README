@@ -47,6 +47,11 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg20304
 Description: Fix for "x optimize" option 8.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg20534.html
 
+- Place qtlpara_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b qtlpara_lapw qtlpara_lapw.patch
+Description:  "x qtl -p" fix for mpi when vector files are on different nodes and removes "single: label not found" error. 
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg20660.html
+
 - Place runsp_c_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b runsp_c_lapw runsp_c_lapw.patch
 Description: Changes csh to tsch and sets vresp in defaults to resolve "vresp: Undefined variable". 
