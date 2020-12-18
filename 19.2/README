@@ -38,8 +38,14 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg19849
 - Apply the patch with: patch -b modules_rc.F modules_rc_wplot.patch
 - Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> wplot
 Description: For wplot calculations, fixes the numbers of the grid when Y and 
-Z are diffrent.
+Z are different.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg20304.html
+
+- Place nn.patch into $WIENROOT/SRC_nn
+- Apply the patch with: patch -b nn.f nn.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> nn
+Description: Limit fix for the number of "neighboring shells".
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg20715.html
 
 - Place optimize.patch into $WIENROOT/SRC_optimize
 - Apply the patch with: patch -b optimize.f optimize.patch
