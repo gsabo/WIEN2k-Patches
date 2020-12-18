@@ -1,0 +1,75 @@
+231c231
+<                          'IATNR+999 to determine equivalency'
+---
+>                          'IATNR+1000 to determine equivalency'
+233,234c233,234
+<                          'IATNR+999 to determine equivalency'
+<             zz(jatom)=999+jatom
+---
+>                          'IATNR+1000 to determine equivalency'
+>             zz(jatom)=1000+jatom
+302c302
+<       DIST=0.                                                           
+---
+>       DIST=0.d0                                                           
+339,340c339
+< !   2 FORMAT(' TO ATOM:',I2,2X,A10,' AT',3F8.4,                         
+< !    * ' IS ',F10.5,' A.U.')                                            
+---
+> !   2 FORMAT(' TO ATOM:',I2,2X,A10,' AT',3F8.4,' IS ',F10.5,' A.U.')                                            
+350,369c349,368
+<       IF(SUMRAD.LE.DISTS(N1))THEN                                       
+<       WRITE(*,7)JATOM,NAME(JATOM),N3,NAME(N3)                           
+<     7 FORMAT(/,3X,2(' ATOM',I3,2X,A10))                                 
+<       WRITE(*,5)JATOM,RMT(JATOM),N3,RMT(N3),SUMRAD,DISTS(1)             
+<       write(66,5)JATOM,RMT(JATOM),N3,RMT(N3),SUMRAD,DISTS(1)             
+<     5 FORMAT(' RMT(',I3,')=',F7.5,' AND RMT(',I3,')=',F7.5,/,            &
+<        ' SUMS TO',F8.5,2X,'LT.  NN-DIST=',F8.5)                         
+<       ELSE                                                              
+<       ovlap(n3)=.false.                        
+<       write(66,4) JATOM,RMT(JATOM),N3,RMT(N3), SUMRAD, DISTS(N1)         
+<     4 FORMAT(/,'   ERROR !!!!!!!!!!!!!!!',                               &
+<       /,' RMT(',I3,')=',F7.5,' AND RMT(',I3,')=',F7.5,/,                 &
+<        ' SUMS TO',F8.5,' GT NNN-DIST=',F8.5)                            
+<       WRITE(*,4) JATOM,RMT(JATOM),N3,RMT(N3), SUMRAD, DISTS(N1)
+<       if(dists(n1).lt.0.0001d0) then
+<         WRITE(*,"('FATAL ERROR, Atoms',i4,' and',i4,' sit at identical positions')") jatom,n3
+<         WRITE(66,"('FATAL ERROR, Atoms',i4,' and',i4,' sit at identical positions')") jatom,n3
+<         stop "NN-ERROR: identical positions"
+<       endif      
+<       ENDIF                                                             
+---
+>        IF(SUMRAD.LE.DISTS(N1))THEN                                       
+>         WRITE(*,7)JATOM,NAME(JATOM),N3,NAME(N3)                           
+>     7   FORMAT(/,3X,2(' ATOM',I3,2X,A10))                                 
+>         WRITE(*,5)JATOM,RMT(JATOM),N3,RMT(N3),SUMRAD,DISTS(1)             
+>         write(66,5)JATOM,RMT(JATOM),N3,RMT(N3),SUMRAD,DISTS(1)             
+>     5   FORMAT(' RMT(',I3,')=',F7.5,' AND RMT(',I3,')=',F7.5,/,            &
+>         ' SUMS TO',F8.5,2X,'LT.  NN-DIST=',F8.5)                         
+>        ELSE                                                              
+>         ovlap(n3)=.false.                        
+>         write(66,4) JATOM,RMT(JATOM),N3,RMT(N3), SUMRAD, DISTS(N1)         
+>     4   FORMAT(/,'   ERROR !!!!!!!!!!!!!!!',                               &
+>         /,' RMT(',I3,')=',F7.5,' AND RMT(',I3,')=',F7.5,/,                 &
+>         ' SUMS TO',F8.5,' GT NNN-DIST=',F8.5)                            
+>         WRITE(*,4) JATOM,RMT(JATOM),N3,RMT(N3), SUMRAD, DISTS(N1)
+>         if(dists(n1).lt.0.0001d0) then
+>          WRITE(*,"('FATAL ERROR, Atoms',i4,' and',i4,' sit at identical positions')") jatom,n3
+>          WRITE(66,"('FATAL ERROR, Atoms',i4,' and',i4,' sit at identical positions')") jatom,n3
+>          stop "NN-ERROR: identical positions"
+>         endif      
+>        ENDIF                                                             
+405a405
+>       if(ishell(index).ge.mshell) goto 186
+411c411
+<         if(ishell(index).ge.mshell) goto 187
+---
+> !        if(ishell(index).ge.mshell) goto 187
+459c459
+<       'ATOM  | DISTANCE   #of NEIGHBORS   Z |')
+---
+>       'ATOM  | DISTANCE   #of NEIGHBORS   (Z or NAMED ATOM index)  |')
+467c467
+<  553    format(i3,1x,8('|',f6.3,i3,f6.1))
+---
+>  553    format(i3,1x,8('|',f6.3,i3,f7.1))
