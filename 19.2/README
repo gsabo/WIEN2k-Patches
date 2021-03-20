@@ -47,6 +47,11 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg20304
 Description: Limit fix for the number of "neighboring shells".
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg20715.html
 
+- Place opticpara_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b opticpara_lapw opticpara_lapw.patch
+Description: Parallel optic fixes related to SCRATCH and spin polarized hf.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg20843.html
+
 - Place optimize.patch into $WIENROOT/SRC_optimize
 - Apply the patch with: patch -b optimize.f optimize.patch
 - Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> optimize
