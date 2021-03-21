@@ -63,6 +63,12 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg20534
 Description:  "x qtl -p" fix for mpi when vector files are on different nodes and removes "single: label not found" error. 
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg20660.html
 
+- Place rotdef.patch into $WIENROOT/SRC_lapw0
+- Apply the patch with: patch -b rotdef.f rotdef.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> lapw0
+Description: Spacegroup Fd-3m fix for lapw0.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg20778.html
+
 - Place runsp_c_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b runsp_c_lapw runsp_c_lapw.patch
 Description: Changes csh to tsch and sets vresp in defaults to resolve "vresp: Undefined variable". 
