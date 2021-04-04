@@ -5,6 +5,12 @@ Patches for WIEN2k 19.2
 
 If using WIEN2k_19.2.tar downloaded before July 2, 2020, download the new WIEN2k_19.2.tar before applying the following patches.
 
+- Place bz_lin.patch into $WIENROOT/SRC_spaghetti
+- Apply the patch with: patch -b bz_lin.f bz_lin.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> spaghetti
+Description: Tolerence adjustment for improving vertical plot lines.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg20928.html
+
 - Place findMINcboa.patch into $WIENROOT/SRC_trig
 - Apply the patch with: patch -b findMINcboa.f findMINcboa.patch
 - Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> trig
