@@ -1,0 +1,19 @@
+14c14
+<       data toler  /1.d-06/
+---
+>       data toler  /1.d-05/
+36a37,38
+> !write(6,'(i3,"k=",4f10.6)') 1,v(1:3,1),xsum
+> !write(6,'(i3,"k=",7f10.6)') 2,v(1:3,2),xsum,dbreak
+43a46
+> !write(6,'(i3,"k=",4f10.6)') jkp,v(1:3,jkp),d
+45d47
+< !print*,'break1'
+78c80
+< !print *,vtest,eps1
+---
+> !print *,"vtest",vtest,toler
+82c84
+< if(abs(vtest).gt.1.d-6) then
+---
+> if(abs(vtest).gt.toler) then
