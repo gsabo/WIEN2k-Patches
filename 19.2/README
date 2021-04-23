@@ -1,6 +1,6 @@
-Installing or upgrading to WIEN2k 19.2, refer to the WIEN2k website [ http://susi.theochem.tuwien.ac.at/ ].
-
 Patches for WIEN2k 19.2
+
+- Upgrade to WIEN2k 21.1, refer to https://github.com/gsabo/WIEN2k-Patches/blob/master/21.1/README
 -----------------------
 
 If using WIEN2k_19.2.tar downloaded before July 2, 2020, download the new WIEN2k_19.2.tar before applying the following patches.
