@@ -1,8 +1,0 @@
-2c2
-<        ,DET,ebs,fc,nst,RNUMB,DENSTY)                                                            
----
->        ,DET,ebs,fc,nst,RNUMB,DENSTY,kselect)                                                            
-30c30
-<       CALL ADOS (NFLOW,NFUN1,NEMIN,NEMAX,ebs,fc,nst, RNUMB,DENSTY,SNUMB,nlast)
----
->       CALL ADOS (NFLOW,NFUN1,NEMIN,NEMAX,ebs,fc,nst, RNUMB,DENSTY,SNUMB,nlast,kselect)

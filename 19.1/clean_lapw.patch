@@ -1,4 +1,0 @@
-1c1
-< #!/bin/csh -f 
----
-> #!/bin/tcsh -f 

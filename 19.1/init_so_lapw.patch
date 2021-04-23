@@ -1,4 +1,0 @@
-287c287
-<      if(! -e $file.in2c_so &&  -e $file.in2_so && ! -z $file.in2c_so  && ! -z $file.in2_so ) mv $file.in2_so $file.in2c
----
->      if(! -e $file.in2c_so &&  -e $file.in2_so && ! -z $file.in2c_so  && ! -z $file.in2_so ) cp $file.in2_so $file.in2c

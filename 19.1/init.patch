@@ -1,4 +1,0 @@
-399c399
-< 198   format(3i3,e14.6,' nmod, nsp, natorb,', &
----
-> 198   format(i3,i3,i4,e14.6,' nmod, nsp, natorb,', &
