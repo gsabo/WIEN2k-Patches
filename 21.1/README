@@ -3,4 +3,12 @@ Installing or upgrading to WIEN2k 21.1, refer to the WIEN2k website [ http://sus
 Patches for WIEN2k 21.1
 -----------------------
 
-None
+- Place qtlpara_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b qtlpara_lapw qtlpara_lapw.patch
+Description: Fix for qtl parallel calculation.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg21125.html
+
+- Place x_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b x_lapw x_lapw.patch
+Description: Fix for qtl parallel calculation.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg21125.html
