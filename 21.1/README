@@ -3,6 +3,18 @@ Installing or upgrading to WIEN2k 21.1, refer to the WIEN2k website [ http://sus
 Patches for WIEN2k 21.1
 -----------------------
 
+- Place calLa_Pre_elast.patch into $WIENROOT/SRC_IRelast
+- Apply the patch with: patch -b calLa_Pre_elast.f calLa_Pre_elast.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> IRelast
+Description: This patch is under test for resolving the following error.  When running set_elast_pressure when WIEN2k was compiled with gfortran, an error may occur with the message:
+
+At line 83 of file calLa_Pre_elast.f (unit = 10, file = 'case.outputeos')
+Fortran runtime error: Constant string in input format
+(' V0,B(GPa),BP,E0',3f15.4,f18.6)
+
+It seems that the ifort compiler allows constants in the input format (i.e.,' V0,B(GPa),BP,E0') while the gfortran compiler does not. Therefore, the generic character format needs to be used for both compilers (i.e., 16x).
+Reference: http://www.matfys.lth.se/staff/carsten.weber/fortran.html
+
 - Place qtlpara_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b qtlpara_lapw qtlpara_lapw.patch
 Description: Fix for qtl parallel calculation.
