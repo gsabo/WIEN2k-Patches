@@ -15,6 +15,12 @@ Fortran runtime error: Constant string in input format
 It seems that the ifort compiler allows constants in the input format (i.e.,' V0,B(GPa),BP,E0') while the gfortran compiler does not. Therefore, the generic character format needs to be used for both compilers (i.e., 16x).
 Reference: http://www.matfys.lth.se/staff/carsten.weber/fortran.html
 
+- Place nn.patch into $WIENROOT/SRC_nn
+- Apply the patch with: patch -b nn.f nn.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> nn
+Description: gfortran single atoms in huge unit cell fix.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg21257.html
+
 - Place qtlpara_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b qtlpara_lapw qtlpara_lapw.patch
 Description: Fix for qtl parallel calculation.
