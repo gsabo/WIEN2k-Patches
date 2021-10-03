@@ -3,6 +3,11 @@ Installing or upgrading to WIEN2k 21.1, refer to the WIEN2k website [ http://sus
 Patches for WIEN2k 21.1
 -----------------------
 
+- Place analyse_phonon_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b analyse_phonon_lapw analyse_phonon_lapw.patch
+Description: Fix of WIEN2k PHONON for case.struct with precise positions.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg21376.html
+
 - Place calLa_Pre_elast.patch into $WIENROOT/SRC_IRelast
 - Apply the patch with: patch -b calLa_Pre_elast.f calLa_Pre_elast.patch
 - Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> IRelast
