@@ -7,7 +7,7 @@ Patches for WIEN2k 21.1
 - Apply the patch with: patch -b analyse_phonon_lapw analyse_phonon_lapw.patch
 Description: Fix of WIEN2k PHONON for case.struct with precise positions.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg21376.html
-
+ 
 - Place calLa_Pre_elast.patch into $WIENROOT/SRC_IRelast
 - Apply the patch with: patch -b calLa_Pre_elast.f calLa_Pre_elast.patch
 - Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> IRelast
@@ -19,6 +19,12 @@ Fortran runtime error: Constant string in input format
 
 It seems that the ifort compiler allows constants in the input format (i.e.,' V0,B(GPa),BP,E0') while the gfortran compiler does not. Therefore, the generic character format needs to be used for both compilers (i.e., 16x).
 Reference: http://www.matfys.lth.se/staff/carsten.weber/fortran.html
+
+- Place Makefile.orig.patch into $WIENROOT/SRC_aim
+- Apply the patch with: patch -b Makefile.orig Makefile.orig.patch
+- Recompile: In ./siteconfig -> O Compiling Options -> S S ave and Quit -> R Compile/Recompile -> S Select program -> aim
+Description: Fixes Makefile for aim Fortran files.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg21408.html
 
 - Place nn.patch into $WIENROOT/SRC_nn
 - Apply the patch with: patch -b nn.f nn.patch
