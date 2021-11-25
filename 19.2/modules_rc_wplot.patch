@@ -1,4 +1,0 @@
-262c262
-<           xyz(3), inwp%grid%N(2), inwp%grid%len(3), inwp%grid%ang(2:1:-1)
----
->           xyz(3), inwp%grid%N(3), inwp%grid%len(3), inwp%grid%ang(2:1:-1)
