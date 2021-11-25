@@ -26,11 +26,24 @@ Reference: http://www.matfys.lth.se/staff/carsten.weber/fortran.html
 Description: Fixes Makefile for aim Fortran files.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg21408.html
 
+- Place Makefile.orig-lapw2.patch into $WIENROOT/SRC_lapw2
+- Apply the patch with: patch -b Makefile.orig Makefile.orig-lapw2.patch
+- Recompile: In ./siteconfig -> C Specify Compiler -> Enter three timesc->
+             R Compile/Recompile -> S Select program -> lapw2
+Description: Initialization of variable fix for "x lapw2 -almd".
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg21456.html
+
 - Place nn.patch into $WIENROOT/SRC_nn
 - Apply the patch with: patch -b nn.f nn.patch
 - Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> nn
 Description: gfortran single atoms in huge unit cell fix.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg21257.html
+
+- Place qdmft.patch into $WIENROOT/SRC_lapw2
+- Apply the patch with: patch -b qdmft.F qdmft.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> lapw2
+Description: Initialization of variable fix for "x lapw2 -almd".
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg21456.html
 
 - Place qtlpara_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b qtlpara_lapw qtlpara_lapw.patch
