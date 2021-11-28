@@ -22,13 +22,13 @@ Reference: http://www.matfys.lth.se/staff/carsten.weber/fortran.html
 
 - Place Makefile.orig.patch into $WIENROOT/SRC_aim
 - Apply the patch with: patch -b Makefile.orig Makefile.orig.patch
-- Recompile: In ./siteconfig -> O Compiling Options -> S S ave and Quit -> R Compile/Recompile -> S Select program -> aim
+- Recompile: In ./siteconfig -> O Compiling Options -> S Save and Quit -> R Compile/Recompile -> S Select program -> aim
 Description: Fixes Makefile for aim Fortran files.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg21408.html
 
 - Place Makefile.orig-lapw2.patch into $WIENROOT/SRC_lapw2
 - Apply the patch with: patch -b Makefile.orig Makefile.orig-lapw2.patch
-- Recompile: In ./siteconfig -> C Specify Compiler -> Enter three timesc->
+- Recompile: In ./siteconfig -> C Specify Compiler -> Enter three times ->
              R Compile/Recompile -> S Select program -> lapw2
 Description: Initialization of variable fix for "x lapw2 -almd".
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg21456.html
