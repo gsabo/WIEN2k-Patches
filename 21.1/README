@@ -52,5 +52,6 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg21125
 
 - Place x_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b x_lapw x_lapw.patch
-Description: Fix for qtl parallel calculation.
+Description: Fix for qtl parallel calculation. Fix for -orbext with runsp_lapw.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg21125.html
+           https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg21691.html
