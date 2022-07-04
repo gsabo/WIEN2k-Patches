@@ -10,6 +10,10 @@
 >     set soqtl = '-so'
 305a312
 >     set hfqtl = '-hf'
+1056c1063
+< set $def
+---
+> set def
 2653a2661,2666
 > #we need lapw2 -fermi mandatory
 > if( "$para" == "para" ) then
