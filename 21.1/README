@@ -50,6 +50,21 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg21456
 Description: Fix for qtl parallel calculation.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg21125.html
 
+- Place run_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b run_lapw run_lapw.patch
+Description: Non-self consistency vsn and vsp fix.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg21791.html
+
+- Place runsp_c_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b runsp_c_lapw runsp_c_lapw.patch
+Description: Non-self consistency vsnup/dn and vspup/dn fix.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg21791.html
+
+- Place runsp_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b runsp_lapw runsp_lapw.patch
+Description: Non-self consistency vsnup/dn and vspup/dn fix.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg21791.html
+
 - Place x_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b x_lapw x_lapw.patch
 Description: Fix for qtl parallel calculation. Fix for -orbext with runsp_lapw.
