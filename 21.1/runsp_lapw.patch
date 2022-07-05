@@ -1,0 +1,8 @@
+445a446,448
+> foreach i (vspup vspdn vnsup vnsdn)
+>   if (-e $file.$i ) cp $file.$i $file.$i"_old"		#save last cycle
+> end
+1194c1197
+< foreach i (clmsum clmup clmdn vspup vspdn vnsup vnsdn )
+---
+> foreach i (clmsum clmup clmdn)
