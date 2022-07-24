@@ -1,0 +1,53 @@
+41a42,43
+> goto new_setrmt
+> # use setrmt instead of manual selection
+96a99
+> new_setrmt:
+99a103,108
+> echo "We use setrmt to set sphere sizes. You can specify a global reduction or specific RMTs using:"
+> echo "  -r XX       or   -a XX:R1,YY:R2,... "
+> echo "Please enter your setrmt options as in the examples above:"
+> set opt=($<)
+> if($#opt == 0) goto new_setrmt
+> 
+105,112c114,125
+< set j=1
+< set k=7
+< while ($j <= $nat)
+<  sed "${k}s/RMT=    2.0000/RMT=    $rmt[$j]/" case_$i.struct > new.struct
+<  mv new.struct case_$i.struct
+<  @ j ++
+<  @ k += 6
+< end 
+---
+> #old way of setting rmt
+> #set j=1
+> #set k=7
+> #while ($j <= $nat)
+> # sed "${k}s/RMT=    2.0000/RMT=    $rmt[$j]/" case_$i.struct > new.struct
+> # mv new.struct case_$i.struct
+> # @ j ++
+> # @ k += 6
+> #end
+> 
+> setrmt case_$i $opt
+> cp case_$i.struct_setrmt case_$i.struct
+157c170
+<         cp ../.lcore .
+---
+>         if(-e ../.core) cp ../.lcore .
+166a180,181
+> 	set xstart=4
+> 	if($x1n == 6) set xstart=3
+168c183
+<         set x1=($x1[4-$x1n])
+---
+>         set x1=($x1[$xstart-$x1n])
+172c187
+<         set x2=($x2[4-$x2n])
+---
+>         set x2=($x2[$xstart-$x2n])
+176c191
+<       cp ../.lcore .
+---
+>       if(-e ../.core) cp ../.lcore .
