@@ -26,6 +26,11 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg21932
 It seems that the ifort compiler allows constants in the input format (i.e.,' V0,B(GPa),BP,E0') while the gfortran compiler does not. Therefore, the generic character format needs to be used for both compilers (i.e., 16x).
 Reference: http://www.matfys.lth.se/staff/carsten.weber/fortran.html
 
+- Place init_phonon_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b init_phonon_lapw init_phonon_lapw.patch
+Description: Fix for more than 100 atoms with init_phonon_lapw.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg21940.html
+
 - Place Makefile.orig.patch into $WIENROOT/SRC_aim
 - Apply the patch with: patch -b Makefile.orig Makefile.orig.patch
 - Recompile: In ./siteconfig -> O Compiling Options -> S Save and Quit -> R Compile/Recompile -> S Select program -> aim
