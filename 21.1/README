@@ -89,6 +89,6 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg21125
 
 Fix for SRC_IRelast
 
-- Since some of the file permissions were not set when packaged in the tarball, set them so IRelast will work as follows:
+- Since some of the file permissions were not set when packaged in the tarball (WIEN2k_21.1.tar), set them so IRelast will work as follows:
   chmod -x $WIENROOT/SRC_IRelast/script-elastic/initIR_lapw
   chmod +x $WIENROOT/initIR_lapw
