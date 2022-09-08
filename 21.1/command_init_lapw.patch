@@ -1,0 +1,8 @@
+58c58
+< echo -n "---->LMAX  (default: 8.0): "
+---
+> echo -n "---->LMAX  (default: 8): "
+60c60
+< if ($LMAX == "") set LMAX = 8.0
+---
+> if ($LMAX == "") set LMAX = 8
