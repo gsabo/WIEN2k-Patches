@@ -1,4 +1,0 @@
-117c117
-<           qdmft.o read_vec.o recpr.o setfft1.o setfft2.o stern.o 
----
->           qdmft.o read_vec.o recpr.o setfft1.o setfft2.o stern.o ALMDPrint.o

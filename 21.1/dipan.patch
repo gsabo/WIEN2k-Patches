@@ -1,8 +1,0 @@
-298c298
-<          aniz(index,k)= aniz(index,k)+(-10.**7)*(coef_an/(2.*volume))*tmom(jatom)*dp
----
->          aniz(index,k)= aniz(index,k)+(-10.**7)*(coef_an/volume)*tmom(jatom)*dp
-341c341
-<         dipa=-10.**7*(coef_an/(2.*volume))*tmom(jat)*dipf(i)
----
->         dipa=-10.**7*(coef_an/volume)*tmom(jat)*dipf(i)
