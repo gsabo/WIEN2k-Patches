@@ -1,0 +1,10 @@
+85a86,91
+> #################################################### H.BOUAFIA
+> set Pr=`grep -n "Precise" case_$i.struct | cut -d":" -f1 `
+> if ($Pr != "" ) then
+> set Pr1=`echo "($Pr - 1)" | bc -l`
+> head -$Pr1 case_$i.struct | tail -$nsym[1] >> ../case.finM
+> else
+86a93,94
+> endif
+> ####################################################
