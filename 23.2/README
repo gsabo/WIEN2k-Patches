@@ -3,3 +3,8 @@ Installing or upgrading to WIEN2k 23.2, refer to the WIEN2k website [ http://sus
 Patches for WIEN2k 23.2
 -----------------------
 
+- Place l2main.patch into $WIENROOT/SRC_lapw2
+- Apply the patch with: patch -b l2main.F l2main.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> lapw2
+Description: Fix for -tau switch.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg22567.html
