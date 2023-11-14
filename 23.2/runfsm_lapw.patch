@@ -1,0 +1,29 @@
+90a91
+> set mixuse=mixer
+171a173,174
+>   case -mix:
+>     shift ; set mixuse = $1 ; sb
+572c575
+< testinput       $file.inm_tau no_tau
+---
+> testinput       $file.inm_tau no_tauc
+574c577
+< no_tau:
+---
+> no_tauc:
+577c580
+< testinput       $file.inm_vresp no_vresp
+---
+> testinput       $file.inm_vresp no_vrespc
+579c582
+< no_vresp:
+---
+> no_vrespc:
+735c738
+<     total_exec  mixer  $minusf
+---
+>     total_exec  $mixuse  $minusf
+737c740
+<     total_exec  mixer $eece1 $orb  $minusf
+---
+>     total_exec  $mixuse $eece1 $orb  $minusf
