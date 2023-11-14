@@ -5,10 +5,21 @@
 >           if(tau_write) then
 2188a2188
 >           endif
-2332,2334c2332,2333
+2328d2327
+<             deallocate(intebuf_lm,rhobuf)
+2330d2328
+<          endif
+2332,2334c2330,2338
 <      !    mpi_send not understandable ? No mpi_recv, hangs for O2 rkm6, PB 
 <     !     if (tau_write) call mpi_send(tau_lm, intebuf(4)*intebuf(3), mpi_double_precision, 0, 0, mpi_vec_comm, ierr)
 <      !    print*,'nach mpi_send',myid
 ---
->          if (tau_write) call mpi_send(tau_lm, intebuf(4)*intebuf(3), mpi_double_precision, 0, 0, mpi_vec_comm, ierr)
->     !     print*,'nach mpi_send',myid
+>             if (tau_write) then
+>                 allocate(vRHObuf(1:IMAX,1:LMMAX))
+>                 vRHObuf(1:IMAX,1:LMMAX)=tau_lm(1:IMAX,1:LMMAX)
+>                 call mpi_send( vRHObuf, intebuf(4)*intebuf(3), mpi_double_precision, 0, 0, mpi_vec_comm, ierr)
+>                 deallocate(VRHObuf)
+> !           print*,'nach mpi_send',myid
+>             endif
+>             deallocate(intebuf_lm,rhobuf)
+>          endif
