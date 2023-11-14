@@ -12,4 +12,9 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg22371
 - Apply the patch with: patch -b l2main.F l2main.patch
 - Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> lapw2
 Description: Fix for -tau switch.
-Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg22567.html
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg22771.html
+
+- Place runfsm_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b runfsm_lapw runfsm_lapw.patch
+Description: Fix for wrong label jump in complex case for a fsm calculation.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg22789.html
