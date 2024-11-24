@@ -1,0 +1,9 @@
+Installing or upgrading to WIEN2k 24.1, refer to the WIEN2k website [ http://susi.theochem.tuwien.ac.at/ ].
+
+Patches for WIEN2k 24.1
+-----------------------
+
+- Place x_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b x_lapw x_lapw.patch
+Description: Fixes bug for "x qtl -so -band".
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23473.html

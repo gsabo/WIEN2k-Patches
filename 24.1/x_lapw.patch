@@ -1,0 +1,17 @@
+2775,2776c2775,2777
+< #we need lapw2 -fermi mandatory
+< if( "$para" == "para" ) then
+---
+> #we need lapw2 -fermi mandatory, unless -band is specified
+> if( ! $?band ) then
+>   if( "$para" == "para" ) then
+2778c2779
+< else
+---
+>   else
+2779a2781
+>   endif
+2815c2817
+< if ($cmplx == c ) then
+---
+> if ($cmplx1 == c ) then
