@@ -3,6 +3,18 @@ Installing or upgrading to WIEN2k 24.1, refer to the WIEN2k website [ http://sus
 Patches for WIEN2k 24.1
 -----------------------
 
+- Place atom_read.patch into $WIENROOT/SRC_dstart
+- Apply the patch with: patch -b atom_read.F atom_read.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> dstart
+Description: Fixes parallel dellocation of rholm for dstart.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23511.html
+
+- Place SearchZ.patch into $WIENROOT/SRC_lapw5
+- Apply the patch with: patch -b SearchZ.F SearchZ.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> lapw5
+Description: Fixes external of rhostm for lapw5. 
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23511.html
+
 - Place x_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b x_lapw x_lapw.patch
 Description: Fixes bug for "x qtl -so -band".
