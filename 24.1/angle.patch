@@ -1,0 +1,15 @@
+175c175,176
+< !!      IF (.not.ortho) THEN                                       
+---
+> 
+>       IF (.not.ortho) THEN                                       
+195c196,202
+< !!      endif
+---
+> 
+>       else
+>       dif(1)=xms(1)*alat(1)
+>       dif(2)=xms(2)*alat(2)
+>       dif(3)=xms(3)*alat(3)
+>       endif
+> 

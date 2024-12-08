@@ -3,6 +3,12 @@ Installing or upgrading to WIEN2k 24.1, refer to the WIEN2k website [ http://sus
 Patches for WIEN2k 24.1
 -----------------------
 
+- Place angle.patch into $WIENROOT/SRC_symmetso
+- Apply the patch with: patch -b angle.f angle.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> symmetso
+Description: Spinpolarized spin-orbit fix for B & F cubic and orthorhombic CXY, CXZ & CYZ lattices.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23543.html
+
 - Place atom_read.patch into $WIENROOT/SRC_dstart
 - Apply the patch with: patch -b atom_read.F atom_read.patch
 - Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> dstart
