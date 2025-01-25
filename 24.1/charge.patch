@@ -1,0 +1,28 @@
+163c163
+< !$omp simd private(y,t) reduction(+:c,sum3)
+---
+> !$omp parallel do private(y,t) reduction(+:c,sum3)
+283c283
+< !$omp simd private(y,t) reduction(+:c,sum)
+---
+> !$omp parallel do private(y,t) reduction(+:c,sum)
+300c300
+< !$omp simd private(y,t) reduction(+:c,sum)
+---
+> !$omp parallel do private(y,t) reduction(+:c,sum)
+318c318
+< !$omp simd private(y,t) reduction(+:c,sum)
+---
+> !$omp parallel do private(y,t) reduction(+:c,sum)
+337c337
+< !$omp simd private(y,t) reduction(+:c,sum)
+---
+> !$omp parallel do private(y,t) reduction(+:c,sum)
+356c356
+< !$omp simd private(y,t) reduction(+:c,sum)
+---
+> !$omp parallel do private(y,t) reduction(+:c,sum)
+375c375
+< !$omp simd private(y,t) reduction(+:c,sum)
+---
+> !$omp parallel do private(y,t) reduction(+:c,sum)

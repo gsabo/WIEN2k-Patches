@@ -11,9 +11,15 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23543
 
 - Place atom_read.patch into $WIENROOT/SRC_dstart
 - Apply the patch with: patch -b atom_read.F atom_read.patch
-- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> dstart
+- Recompile: In ./siteconfig -> R Compile/Recompile -> A Compile all programs
 Description: Fixes parallel dellocation of rholm for dstart.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23511.html
+
+- Place charge.patch into $WIENROOT/SRC_Globals
+- Apply the patch with: patch -b charge.f charge.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> dstart
+Description: Fixes charge.f to allow ifx compile with higher optimization (e.g., -O instead of -O0).
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23572.html
 
 - Place SearchZ.patch into $WIENROOT/SRC_lapw5
 - Apply the patch with: patch -b SearchZ.F SearchZ.patch
