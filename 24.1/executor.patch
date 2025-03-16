@@ -1,0 +1,7 @@
+576a577
+> 
+594a596,599
+> 	}
+> 	if ($FORM{'prog'}=~/lapw5/) {
+> 	    $opts .= " $proginput"; #fügt -b ... etc. an das Programm an
+> 	    $proginput=" ";

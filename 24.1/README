@@ -21,6 +21,11 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23511
 Description: Fixes charge.f to allow ifx compile with higher optimization (e.g., -O instead of -O0).
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23572.html
 
+- Place executor.patch into $WIENROOT/SRC_w2web/htdocs/exec
+- Apply the patch with: patch -b executor.pl executor.patch
+Description: Fixes charge density plotting options in w2web.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23653.html
+
 - Place SearchZ.patch into $WIENROOT/SRC_lapw5
 - Apply the patch with: patch -b SearchZ.F SearchZ.patch
 - Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> lapw5
