@@ -26,6 +26,12 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23572
 Description: Fixes charge density plotting options in w2web.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23653.html
 
+- Place l2main.patch into $WIENROOT/SRC_lapw2
+- Apply the patch with: patch -b l2main.F l2main.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> lapw2
+Description: Fix for -tau switch.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg22771.html
+
 - Place SearchZ.patch into $WIENROOT/SRC_lapw5
 - Apply the patch with: patch -b SearchZ.F SearchZ.patch
 - Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> lapw5
