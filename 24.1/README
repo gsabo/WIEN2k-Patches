@@ -32,6 +32,12 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23653
 Description: Fixes external of rhostm for lapw5. 
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23511.html
 
+- Place StorePot.patch into $WIENROOT/SRC_mixer
+- Apply the patch with: patch -b StorePot.f StorePot.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> mixer
+Description: Mixer fix for 99 non-equivalent atoms. 
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23768.html
+
 - Place x_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b x_lapw x_lapw.patch
 Description: Fixes bug for "x qtl -so -band".
