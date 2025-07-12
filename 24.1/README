@@ -11,9 +11,15 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23543
 
 - Place atom_read.patch into $WIENROOT/SRC_dstart
 - Apply the patch with: patch -b atom_read.F atom_read.patch
-- Recompile: In ./siteconfig -> R Compile/Recompile -> A Compile all programs
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> dstart
 Description: Fixes parallel dellocation of rholm for dstart.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23511.html
+
+- Place atom_write.patch into $WIENROOT/SRC_dstart
+- Apply the patch with: patch -b atom_write.f atom_write.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> dstart
+Description: Fix to remove first cycle lapw0 Segmentation falut (core dumped) error with OMP_NUM_THREADS > 1. 
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23797.html
 
 - Place charge.patch into $WIENROOT/SRC_Globals
 - Apply the patch with: patch -b charge.f charge.patch
@@ -31,6 +37,12 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23653
 - Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> lapw2
 Description: Fix for -tau switch.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg22771.html
+
+- Place lapw0.patch into $WIENROOT/SRC_lapw0
+- Apply the patch with: patch -b lapw0.F lapw0.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> lapw0
+Description: Fix to remove first cycle lapw0 Segmentation falut (core dumped) error with OMP_NUM_THREADS > 1. 
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23797.html
 
 - Place SearchZ.patch into $WIENROOT/SRC_lapw5
 - Apply the patch with: patch -b SearchZ.F SearchZ.patch
