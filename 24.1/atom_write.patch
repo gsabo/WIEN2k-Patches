@@ -1,0 +1,8 @@
+20c20
+<         write(51,77)                                
+---
+>         write(51,77) ncom1                                
+37c37
+<  77   format(1x,9(f9.7))                                                
+---
+>  77   FORMAT(' LM-max:',i4)                                                

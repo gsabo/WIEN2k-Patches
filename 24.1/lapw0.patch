@@ -1,0 +1,4 @@
+345c345
+<       if(lmmaxx.eq.0) lmmaxx=ncom
+---
+>       if(lmmaxx.eq.0) lmmaxx=121
