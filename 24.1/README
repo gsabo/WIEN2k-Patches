@@ -18,7 +18,7 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23511
 - Place atom_write.patch into $WIENROOT/SRC_dstart
 - Apply the patch with: patch -b atom_write.f atom_write.patch
 - Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> dstart
-Description: Fix to remove first cycle lapw0 Segmentation falut (core dumped) error with OMP_NUM_THREADS > 1. 
+Description: Fix to remove first cycle lapw0 Segmentation falut (core dumped) error with OMP_NUM_THREADS > 1 when compiled with ifx. 
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23797.html
 
 - Place charge.patch into $WIENROOT/SRC_Globals
@@ -41,7 +41,7 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg22771
 - Place lapw0.patch into $WIENROOT/SRC_lapw0
 - Apply the patch with: patch -b lapw0.F lapw0.patch
 - Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> lapw0
-Description: Fix to remove first cycle lapw0 Segmentation falut (core dumped) error with OMP_NUM_THREADS > 1. 
+Description: Fix to remove first cycle lapw0 Segmentation falut (core dumped) error with OMP_NUM_THREADS > 1 when compiled with ifx. 
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23797.html
 
 - Place SearchZ.patch into $WIENROOT/SRC_lapw5
