@@ -1,0 +1,6 @@
+53a54,58
+> else ifneq "$(findstring ifx,$(FC))" ""
+> FFLAGS += -free -gen-interface nosource -traceback -g #-debug all -check format,uninit,output_conversion -warn all
+> #FOPT   += -ipo
+> MODOPT ?= -module
+> 

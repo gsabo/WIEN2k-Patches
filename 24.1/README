@@ -44,9 +44,16 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg22771
 Description: Fix to remove first cycle lapw0 Segmentation falut (core dumped) error with OMP_NUM_THREADS > 1 when compiled with ifx. 
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23797.html
 
+- Place make.sys.patch into $WIENROOT/SRC_w2w
+- Apply the patch with: patch -b make.sys make.sys.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> w2w
+             In ./siteconfig -> R Compile/Recompile -> S Select program -> wplot
+Description: Added an else if statement block that allows building wien2wannier files with the Intel ifx compiler.
+Reference: None
+
 - Place SearchZ.patch into $WIENROOT/SRC_lapw5
 - Apply the patch with: patch -b SearchZ.F SearchZ.patch
-- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> lapw5
+- Recompile:  ./siteconfig -> R Compile/Recompile -> S Select program -> lapw5
 Description: Fixes external of rhostm for lapw5. 
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23511.html
 
