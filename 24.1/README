@@ -49,7 +49,7 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23797
 - Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> w2w
              In ./siteconfig -> R Compile/Recompile -> S Select program -> wplot
 Description: Added an else if statement block that allows building wien2wannier files with the Intel ifx compiler.
-Reference: None
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23802.html
 
 - Place SearchZ.patch into $WIENROOT/SRC_lapw5
 - Apply the patch with: patch -b SearchZ.F SearchZ.patch
