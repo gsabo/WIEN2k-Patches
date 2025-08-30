@@ -1,0 +1,3 @@
+31a32,33
+> else ifneq "$(findstring ifx,$(FC))" ""
+> MODOPT ?= -module

@@ -51,6 +51,12 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23797
 Description: Added an else if statement block that allows building wien2wannier files with the Intel ifx compiler.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23802.html
 
+- Place Makefile.orig.patch into $WIENROOT/SRC_trig
+- Apply the patch with: patch -b Makefile.orig Makefile.orig.patch
+- Update Makefile: In ./siteconfig -> C Specifiy Compiler
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> trig
+Description: Added an else if statement block that allows building trig files with the Intel ifx compiler.
+
 - Place SearchZ.patch into $WIENROOT/SRC_lapw5
 - Apply the patch with: patch -b SearchZ.F SearchZ.patch
 - Recompile:  ./siteconfig -> R Compile/Recompile -> S Select program -> lapw5
@@ -60,7 +66,7 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23511
 - Place StorePot.patch into $WIENROOT/SRC_mixer
 - Apply the patch with: patch -b StorePot.f StorePot.patch
 - Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> mixer
-Description: Mixer fix for 99 non-equivalent atoms. 
+Description: Mixer fix for 99 non-equivalent atoms.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23768.html
 
 - Place x_lapw.patch into $WIENROOT
