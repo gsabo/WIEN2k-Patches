@@ -32,6 +32,11 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23572
 Description: Fixes charge density plotting options in w2web.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23653.html
 
+- Place init_elast_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b init_elast_lapw init_elast_lapw.patch
+Description: Fixes ELAST initializations so that lstart automatically creates a proper case.inst file.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23835.html
+
 - Place init_orb_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b init_orb_lapw init_orb_lapw.patch
 Description: Corrects spelling in help from "init_borb_lapw" to "init_orb_lapw".

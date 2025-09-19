@@ -1,0 +1,4 @@
+30c30
+< cp ../$pref.inst ./$i/$i.inst
+---
+> #cp ../$pref.inst ./$i/$i.inst
