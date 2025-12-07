@@ -32,6 +32,12 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23572
 Description: Fixes charge density plotting options in w2web.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23653.html
 
+- Place find_nloat.patch into $WIENROOT/SRC_lapw1
+- Apply the patch with: patch -b find_nloat.F find_nloat.patch
+- Recompile: In ./siteconfig -> R Compile/Recompile -> S Select program -> lapw1
+Description: NMR fix to lapw1 for high energy valued H-LOs.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23913.html
+
 - Place init_elast_lapw.patch into $WIENROOT
 - Apply the patch with: patch -b init_elast_lapw init_elast_lapw.patch
 Description: Fixes ELAST initializations so that lstart automatically creates a proper case.inst file.
