@@ -1,0 +1,26 @@
+293,296c293,300
+< #testinput	$file.indmc error_input
+< ####total_exec	lapwdm -up $para $so $cmplx $scratchstring
+< ###if ( $?sp_c ) then              #LDM
+< ###  cp $file.dmatup $file.dmatdn
+---
+> if ( "$so" == '-so' ) then
+> testinput	$file.indmc error_input
+> total_exec	lapwdm -up $para $so $cmplx $scratchstring
+> if ( $?sp_c ) then              #LDM
+>   cp $file.dmatup $file.dmatdn
+> endif
+> cat $file.scfdmup>>$file.scfeece
+> endif
+302d305
+< ###  cat $file.scfdmup>>$file.scfeece
+319c322,324
+< total_exec	lapw2 $cmplx -up $so $para $vresp $tau -eece -orb $in1orig  $scratchstring
+---
+> set orbind='-orb'
+> if ( "$so" == '-so' ) set orbind=
+> total_exec	lapw2 $cmplx -up $so $para $vresp $tau -eece $orbind $in1orig  $scratchstring
+348c353
+<     total_exec    lapw2 $cmplx -dn $so $para $vresp $tau -eece -orb $in1orig  $scratchstring
+---
+>     total_exec    lapw2 $cmplx -dn $so $para $vresp $tau -eece $orbind $in1orig  $scratchstring

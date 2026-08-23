@@ -73,6 +73,11 @@ Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23802
 Description: Added an else if statement block that allows building trig files with the Intel ifx compiler.
 Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg23825.html
 
+- Place runeece_lapw.patch into $WIENROOT
+- Apply the patch with: patch -b runeece_lapw runeece_lapw.patch
+Description: Fixes asymmetry in the dmat occupations for runsp -eece -so calculations.
+Reference: https://www.mail-archive.com/wien@zeus.theochem.tuwien.ac.at/msg24036.html
+
 - Place SearchZ.patch into $WIENROOT/SRC_lapw5
 - Apply the patch with: patch -b SearchZ.F SearchZ.patch
 - Recompile:  ./siteconfig -> R Compile/Recompile -> S Select program -> lapw5
